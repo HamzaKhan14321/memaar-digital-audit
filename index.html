@@ -269,7 +269,105 @@
     box-shadow:0 18px 44px rgba(0,0,0,.14);
   }
   .final .callout b{color:#7c5609}
-  @media(max-width:980px){.final-grid,.output-strip,.final-lanes{grid-template-columns:1fr}.section.final{padding:24px}.final-card.wide{padding:22px}}
+  .evidence-pack{
+    padding:30px;
+    border-radius:34px;
+    color:#fff;
+    border:1px solid rgba(247,223,170,.28);
+    background:
+      radial-gradient(circle at 8% 0%,rgba(247,223,170,.20),transparent 31%),
+      radial-gradient(circle at 94% 92%,rgba(64,148,181,.25),transparent 36%),
+      linear-gradient(135deg,#08121f 0%,#132b43 48%,#0a4d4f 100%)!important;
+    box-shadow:0 34px 95px rgba(15,26,36,.26);
+    --accent:247,223,170;
+    --accent2:64,148,181;
+    --glow:rgba(247,223,170,.18);
+  }
+  .evidence-pack:before{
+    opacity:1;
+    transform:none;
+    height:5px;
+    background:linear-gradient(90deg,#f7dfaa,#4094b5,#087f5b);
+  }
+  .evidence-pack .section-head{border-bottom:1px solid rgba(255,255,255,.16);margin-bottom:24px;padding-bottom:24px}
+  .evidence-pack .section-head h2{color:#fff}
+  .evidence-pack .section-note{color:#edf5fc;max-width:780px}
+  .evidence-layout{display:grid;grid-template-columns:1.04fr .96fr;gap:18px}
+  .evidence-panel{
+    position:relative;
+    overflow:hidden;
+    padding:24px;
+    border-radius:22px;
+    background:linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.075));
+    border:1px solid rgba(255,255,255,.17);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.10),0 20px 52px rgba(0,0,0,.16);
+    backdrop-filter:blur(12px);
+  }
+  .evidence-panel:after{
+    content:"";
+    position:absolute;
+    right:-70px;
+    top:-90px;
+    width:210px;
+    height:210px;
+    border-radius:50%;
+    background:radial-gradient(circle,rgba(247,223,170,.18),transparent 68%);
+    pointer-events:none;
+  }
+  .evidence-panel h3{margin:0 0 10px;color:#f7dfaa;font-size:27px;letter-spacing:-.02em}
+  .evidence-panel p{margin:0;color:#edf5fc;font-size:16px;line-height:1.7}
+  .evidence-points{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+  .evidence-point{
+    padding:15px;
+    border-radius:16px;
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.14);
+  }
+  .evidence-point b{display:block;color:#fff;margin-bottom:5px}
+  .evidence-point span{display:block;color:#dce8f3;font-size:14px;line-height:1.55}
+  .download-box{
+    display:flex;
+    min-height:100%;
+    flex-direction:column;
+    justify-content:space-between;
+    gap:18px;
+    padding:26px;
+    border-radius:22px;
+    background:
+      radial-gradient(circle at 88% 18%,rgba(247,223,170,.20),transparent 42%),
+      linear-gradient(145deg,rgba(5,14,25,.66),rgba(9,82,80,.42));
+    border:1px solid rgba(255,255,255,.18);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 24px 60px rgba(0,0,0,.18);
+  }
+  .download-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .download-meta div{
+    padding:14px;
+    border-radius:16px;
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.13);
+  }
+  .download-meta b{display:block;color:#f7dfaa;font-size:22px}
+  .download-meta span{display:block;color:#edf5fc;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+  .download-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    width:100%;
+    padding:17px 20px;
+    border-radius:18px;
+    color:#101820;
+    font-weight:950;
+    text-decoration:none;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    background:linear-gradient(135deg,#fff2c5,#f7dfaa 48%,#d1a246);
+    box-shadow:0 20px 48px rgba(247,223,170,.22);
+    transition:transform .25s ease,box-shadow .25s ease,filter .25s ease;
+  }
+  .download-button:hover{transform:translateY(-4px);box-shadow:0 30px 66px rgba(247,223,170,.30);filter:saturate(1.08)}
+  .download-note{font-size:14px!important;color:#dce8f3!important}
+  @media(max-width:980px){.final-grid,.output-strip,.final-lanes,.evidence-layout,.evidence-points{grid-template-columns:1fr}.section.final,.evidence-pack{padding:24px}.final-card.wide{padding:22px}.download-meta{grid-template-columns:1fr}}
   @media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -992,6 +1090,41 @@
       </div></div>
     </div>
     <div class="callout"><b>Expected impact:</b> this system should make Memaar's digital presence more professional, more consistent, easier to understand, and better routed. It does not claim confirmed ROI or sales because ad spend, CPL, leads, bookings, and revenue data were not provided.</div>
+  </section>
+
+  <section class="section evidence-pack" id="evidence-pack">
+    <div class="section-head">
+      <div>
+        <h2>Research Evidence Pack</h2>
+        <p class="section-note">A CEO-ready DOCX file is attached at the end of the audit so management can review how the audit was built, what source material was checked, and where the data boundaries are.</p>
+      </div>
+      <span class="pill gold">Downloadable DOCX</span>
+    </div>
+    <div class="evidence-layout">
+      <div class="evidence-panel">
+        <h3>What This File Contains</h3>
+        <p>The evidence pack organizes the supporting research behind this audit into a professional document: research notes, platform screenshots, Linktree and profile checks, MD/PDF/image references, verified metrics, and data-gap notes. It is designed for internal review if the CEO or management asks how the recommendations were formed.</p>
+        <div class="evidence-points">
+          <div class="evidence-point"><b>Research AI Outputs</b><span>Categorized findings and reasoning used to shape the audit direction.</span></div>
+          <div class="evidence-point"><b>Screenshots & Files</b><span>Platform, Linktree, website, and supporting visual evidence reviewed during the audit.</span></div>
+          <div class="evidence-point"><b>MD / PDF / Image Sources</b><span>Archived source material grouped so the evidence trail is easier to inspect.</span></div>
+          <div class="evidence-point"><b>Data Boundaries</b><span>Clear notes on what was verified and what was not provided, including missing lead, CPL, booking, and revenue data.</span></div>
+        </div>
+      </div>
+      <div class="download-box">
+        <div>
+          <h3>CEO Edition Evidence Pack</h3>
+          <p>Use this file as the formal backup document for the audit. It supports the HTML presentation without turning the main audit into a long report.</p>
+        </div>
+        <div class="download-meta">
+          <div><b>80</b><span>tables</span></div>
+          <div><b>100</b><span>images</span></div>
+          <div><b>DOCX</b><span>format</span></div>
+        </div>
+        <a class="download-button" href="./Memaar_Audit_Research_Evidence_Pack_CEO_Edition.docx" download>Download CEO Evidence Pack</a>
+        <p class="download-note">The document is provided as evidence support only. It does not add unsupported ROI, revenue, CPL, booking, sales, or lead claims.</p>
+      </div>
+    </div>
   </section>
 
 <footer>Memaar Digital Audit & Optimized Content System V10 - prepared by Hamza Khan. Built from the current supplied data only.</footer>
