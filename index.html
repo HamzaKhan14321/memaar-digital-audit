@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Memaar Digital Audit & Optimized Content System - V14</title>
+<title>Memaar Digital Audit & Optimized Content System - V15</title>
 <style>
   :root{
     --ink:#0f1a24;--ink2:#182838;--muted:#5f6d7c;--line:#e3e9f0;--paper:#f8f1e4;--white:#fff;
@@ -368,7 +368,7 @@
   .download-button:hover{transform:translateY(-4px);box-shadow:0 30px 66px rgba(247,223,170,.30);filter:saturate(1.08)}
   .download-note{font-size:14px!important;color:#dce8f3!important}
 
-  /* V14 boardroom premium system */
+  /* V15 boardroom premium system */
   :root{
     --v11-ink:#0c1724;
     --v11-muted:#526579;
@@ -629,7 +629,7 @@
   }
   .download-button:after{content:"";width:8px;height:8px;border-top:2px solid #101820;border-right:2px solid #101820;transform:rotate(45deg)}
 
-  /* V14 visual analytics experience pass */
+  /* V15 visual analytics experience pass */
   :root{
     --rail-bg:rgba(7,16,29,.66);
     --rail-line:rgba(247,223,170,.20);
@@ -873,7 +873,7 @@
   .section p,.platform-card p,.info-card p,.info-card li,.final-card p,.final-card li{
     text-wrap:pretty;
   }
-  /* V14 analytics and chart system */
+  /* V15 analytics and chart system */
   .analytics-section{
     padding:30px;
     border-radius:32px;
@@ -1043,7 +1043,7 @@
     font-weight:800;
   }
   .pa-output-list b{color:#f7dfaa}
-  /* V14 executive polish pass */
+  /* V15 executive polish pass */
   .analytics-section .section-head h2,
   .company-banner h2,
   .platform-top h3,
@@ -1198,6 +1198,140 @@
     box-shadow:0 18px 42px rgba(247,223,170,.18);
     filter:saturate(1.08);
   }
+  .ceo-brief{
+    --accent:247,223,170;
+    --accent2:8,127,91;
+    color:#fff;
+    background:
+      radial-gradient(circle at 10% 12%,rgba(247,223,170,.20),transparent 30%),
+      radial-gradient(circle at 92% 18%,rgba(64,148,181,.18),transparent 34%),
+      linear-gradient(135deg,#07101d 0%,#13283d 52%,#082f34 100%)!important;
+    border-color:rgba(247,223,170,.26)!important;
+    box-shadow:0 34px 96px rgba(9,18,30,.22);
+  }
+  .ceo-brief .section-head{border-color:rgba(255,255,255,.16)}
+  .ceo-brief h2{color:#fff}
+  .ceo-brief .section-note{color:#dfebf5;max-width:850px}
+  .decision-deck{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:16px;
+    align-items:stretch;
+  }
+  .decision-card{
+    position:relative;
+    overflow:hidden;
+    padding:24px;
+    border-radius:26px;
+    background:linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.065));
+    border:1px solid rgba(255,255,255,.16);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 24px 64px rgba(0,0,0,.16);
+    backdrop-filter:blur(14px) saturate(1.08);
+  }
+  .decision-card:before{
+    content:"";
+    position:absolute;
+    inset:0 0 auto 0;
+    height:4px;
+    background:linear-gradient(90deg,#f7dfaa,#087f5b,#4094b5);
+    background-size:220% 100%;
+    animation:goldLineDrift 4.8s ease-in-out infinite alternate;
+  }
+  .decision-card small{
+    display:inline-flex;
+    margin-bottom:13px;
+    color:#f7dfaa;
+    font-size:11px;
+    font-weight:950;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+  }
+  .decision-card h3{
+    margin:0 0 12px;
+    color:#fff;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(28px,3vw,44px);
+    line-height:1.02;
+    letter-spacing:-.04em;
+    text-wrap:balance;
+  }
+  .decision-card p{margin:0;color:#e9f2fa;font-size:16px;line-height:1.68}
+  .decision-card.hero-decision{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    min-height:320px;
+  }
+  .decision-badges{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:22px;
+  }
+  .decision-badges span{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:10px 12px;
+    border-radius:999px;
+    color:#f5fbff;
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.14);
+    font-size:12px;
+    font-weight:900;
+  }
+  .decision-badges span:before{
+    content:"";
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#f7dfaa,#087f5b);
+    box-shadow:0 0 16px rgba(247,223,170,.34);
+  }
+  .decision-stack{display:grid;gap:12px}
+  .decision-mini{
+    display:grid;
+    grid-template-columns:42px 1fr;
+    gap:13px;
+    padding:16px;
+    border-radius:20px;
+    background:rgba(255,255,255,.095);
+    border:1px solid rgba(255,255,255,.13);
+    transition:transform .24s ease,border-color .24s ease,background .24s ease,box-shadow .24s ease;
+  }
+  .decision-mini:hover{
+    transform:translateX(5px);
+    background:rgba(255,255,255,.14);
+    border-color:rgba(247,223,170,.32);
+    box-shadow:0 18px 44px rgba(0,0,0,.14);
+  }
+  .decision-mini em{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    font-style:normal;
+    color:#101820;
+    background:linear-gradient(135deg,#fff2c5,#f7dfaa);
+    font-weight:950;
+  }
+  .decision-mini b{display:block;color:#fff;font-size:16px;margin-bottom:4px}
+  .decision-mini span{display:block;color:#dce8f3;font-size:13px;line-height:1.55}
+  .approval-strip{
+    margin-top:16px;
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:10px;
+  }
+  .approval-strip div{
+    padding:14px;
+    border-radius:18px;
+    background:rgba(255,255,255,.09);
+    border:1px solid rgba(255,255,255,.12);
+  }
+  .approval-strip b{display:block;color:#f7dfaa;font-size:18px}
+  .approval-strip span{display:block;color:#e8f2fa;font-size:12px;font-weight:850;line-height:1.45}
   @keyframes goldLineDrift{from{background-position:0% 50%}to{background-position:100% 50%}}
   @keyframes barReveal{from{transform:scaleX(.08);filter:saturate(.7)}to{transform:scaleX(1);filter:saturate(1)}}
   @media(max-width:1540px){
@@ -1210,7 +1344,7 @@
     .chapter-rail{display:none}
     .execution-system{grid-template-columns:1fr}
     .chapter-transition{padding:22px}
-    .analytics-grid,.score-ring-wrap,.rhythm-analytics,.platform-analytics,.decision-ribbon{grid-template-columns:1fr}
+    .analytics-grid,.score-ring-wrap,.rhythm-analytics,.platform-analytics,.decision-ribbon,.decision-deck,.approval-strip{grid-template-columns:1fr}
     .decision-ribbon em{justify-self:start}
     .capture-grid{grid-template-columns:1fr 1fr}
     .role-flow{grid-template-columns:1fr}
@@ -1305,14 +1439,14 @@
   </section>
 
   <header class="hero" id="audit">
-    <span class="eyebrow">Memaar Digital Audit - V14 executive analytics edition</span>
+    <span class="eyebrow">Memaar Digital Audit - V15 executive decision edition</span>
     <h1>Digital Audit & Optimized Content System</h1>
     <p>A compact, company-by-company audit built from the current data supplied by Memaar. The focus is practical: understand the digital situation, keep what works, fix what blocks action, and run a controlled monthly content engine.</p>
     <div class="executive-snapshot">
       <div class="snapshot-copy">
         <span class="snapshot-kicker">Executive Snapshot</span>
         <strong>Memaar has reach. The next professional step is action routing.</strong>
-        <p>The audit shows a reach-strong but conversion-weak digital operation. V14 sharpens the analytical layer with clearer chart hierarchy, platform-level data storytelling, stronger buyer paths, and one monthly engine managed with discipline.</p>
+        <p>The audit shows a reach-strong but conversion-weak digital operation. V15 turns the audit into a sharper executive decision experience: stronger hierarchy, cleaner evidence, clearer buyer paths, and one monthly engine managed with discipline.</p>
       </div>
       <div class="snapshot-stack">
         <div class="snapshot-item"><span class="snapshot-num">01</span><div><b>Visibility is proven</b><span>Facebook, TikTok, YouTube, Instagram, LinkedIn, and Search already create attention.</span></div></div>
@@ -1327,6 +1461,45 @@
       <div class="hero-stat"><b data-count="5">5</b><span>SEO blogs per month for website growth.</span></div>
     </div>
   </header>
+
+  <section class="section ceo-brief" id="ceo-brief">
+    <div class="section-head">
+      <div>
+        <h2>CEO Decision Brief</h2>
+        <p class="section-note">The full audit is detailed below, but the management decision is simple: Memaar already has attention. The next approval should focus on content structure, conversion routing, and trackable inquiry paths.</p>
+      </div>
+      <span class="pill gold">Read first</span>
+    </div>
+    <div class="decision-deck">
+      <div class="decision-card hero-decision">
+        <div>
+          <small>Recommended decision</small>
+          <h3>Approve a controlled monthly content engine, not random posting volume.</h3>
+          <p>Hamza will run one disciplined system across website, short-form video, paid creative, SEO blogs, posts, carousels, LinkedIn, YouTube, profile cleanup, and action routing. The goal is not to claim sales. The goal is to make Memaar's digital presence more consistent, more credible, easier to understand, and easier to route toward measurable inquiries.</p>
+        </div>
+        <div class="decision-badges">
+          <span>65/100 readiness</span>
+          <span>Reach is proven</span>
+          <span>Action routing is weak</span>
+          <span>ROI proof not supplied</span>
+        </div>
+      </div>
+      <div class="decision-card">
+        <small>Executive filter</small>
+        <div class="decision-stack">
+          <div class="decision-mini"><em>01</em><div><b>What is already working</b><span>Facebook Developments, TikTok, YouTube history, Instagram activity, LinkedIn engagement, and Search Console show verified attention exists.</span></div></div>
+          <div class="decision-mini"><em>02</em><div><b>What is holding it back</b><span>Link taps, button clicks, follower capture, subscriber capture, profile routing, and source reporting are not strong enough yet.</span></div></div>
+          <div class="decision-mini"><em>03</em><div><b>What Hamza will run</b><span>15 shared core shorts, 5 SEO blogs, 4 premium Facebook ad creatives, 8 posts, 5 carousels, 5 LinkedIn posts, 3 medium videos, and 1 monthly cleanup.</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="approval-strip">
+      <div><b>Approve</b><span>One monthly operating system.</span></div>
+      <div><b>Route</b><span>Attention toward project pages, WhatsApp, and clear CTAs.</span></div>
+      <div><b>Measure</b><span>Clicks, profile actions, inquiries, and source quality when data is available.</span></div>
+      <div><b>Protect</b><span>No unsupported revenue, ROI, CPL, booking, or sales claims.</span></div>
+    </div>
+  </section>
 
   <section class="section analytics-section" id="score-ring">
     <div class="section-head"><div><h2>Digital Readiness Score</h2><p class="section-note">A compact visual summary of Memaar's current digital readiness: strong reach, weaker conversion architecture, and limited attribution data.</p></div><span class="pill gold">65/100</span></div>
@@ -2213,7 +2386,7 @@
     </div>
   </section>
 
-<footer>Memaar Digital Audit & Optimized Content System V14 - prepared by Hamza Khan. Built from the current supplied data only.</footer>
+<footer>Memaar Digital Audit & Optimized Content System V15 - prepared by Hamza Khan. Built from the current supplied data only.</footer>
 </div>
 <script>
 (() => {
