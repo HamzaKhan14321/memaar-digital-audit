@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Memaar Digital Audit & Optimized Content System - V12</title>
+<title>Memaar Digital Audit & Optimized Content System - V13</title>
 <style>
   :root{
     --ink:#0f1a24;--ink2:#182838;--muted:#5f6d7c;--line:#e3e9f0;--paper:#f8f1e4;--white:#fff;
@@ -368,7 +368,7 @@
   .download-button:hover{transform:translateY(-4px);box-shadow:0 30px 66px rgba(247,223,170,.30);filter:saturate(1.08)}
   .download-note{font-size:14px!important;color:#dce8f3!important}
 
-  /* V12 boardroom premium system */
+  /* V13 boardroom premium system */
   :root{
     --v11-ink:#0c1724;
     --v11-muted:#526579;
@@ -629,7 +629,7 @@
   }
   .download-button:after{content:"";width:8px;height:8px;border-top:2px solid #101820;border-right:2px solid #101820;transform:rotate(45deg)}
 
-  /* V12 visual experience pass */
+  /* V13 visual analytics experience pass */
   :root{
     --rail-bg:rgba(7,16,29,.66);
     --rail-line:rgba(247,223,170,.20);
@@ -873,6 +873,176 @@
   .section p,.platform-card p,.info-card p,.info-card li,.final-card p,.final-card li{
     text-wrap:pretty;
   }
+  /* V13 analytics and chart system */
+  .analytics-section{
+    padding:30px;
+    border-radius:32px;
+    color:#fff;
+    border:1px solid rgba(247,223,170,.24);
+    background:
+      radial-gradient(circle at 88% 8%,rgba(247,223,170,.20),transparent 30%),
+      radial-gradient(circle at 8% 100%,rgba(64,148,181,.18),transparent 36%),
+      linear-gradient(135deg,#07101d 0%,#142b43 48%,#0a4d4f 100%)!important;
+    box-shadow:0 30px 90px rgba(12,23,36,.20);
+  }
+  .analytics-section .section-head{border-color:rgba(255,255,255,.15)}
+  .analytics-section h2,.analytics-section h3{color:#fff}
+  .analytics-section .section-note{color:#dce8f3}
+  .analytics-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}
+  .analytics-card{
+    position:relative;
+    overflow:hidden;
+    padding:22px;
+    border-radius:24px;
+    background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.065));
+    border:1px solid rgba(255,255,255,.16);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 20px 58px rgba(0,0,0,.15);
+  }
+  .analytics-card:before{
+    content:"";
+    position:absolute;
+    inset:0 0 auto 0;
+    height:4px;
+    background:linear-gradient(90deg,#f7dfaa,#087f5b,#4094b5);
+  }
+  .analytics-card h3{margin:0 0 10px;font-size:25px;letter-spacing:-.02em}
+  .analytics-card p{margin:0;color:#e7f0f8;line-height:1.65}
+  .score-ring-wrap{display:grid;grid-template-columns:220px 1fr;gap:22px;align-items:center}
+  .score-ring{width:220px;height:220px}
+  .score-ring text{font-family:Inter,Manrope,"Segoe UI",Arial,sans-serif;fill:#fff}
+  .score-ring .label{fill:#dce8f3;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+  .score-ring .score{font-size:34px;font-weight:950}
+  .score-labels{display:grid;gap:10px}
+  .score-labels span{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    padding:12px 14px;
+    border-radius:16px;
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.13);
+    color:#edf5fc;
+    font-weight:850;
+  }
+  .score-labels b{color:#f7dfaa}
+  .chart-note{
+    margin-top:16px;
+    padding:15px 17px;
+    border-radius:18px;
+    color:#2f240c;
+    background:linear-gradient(135deg,#fff8e6,#fffdf5);
+    border:1px solid rgba(247,223,170,.70);
+  }
+  .bar-chart{display:grid;gap:12px}
+  .bar-row{
+    display:grid;
+    grid-template-columns:minmax(130px,.72fr) minmax(160px,1fr) 72px;
+    gap:12px;
+    align-items:center;
+  }
+  .bar-row b{color:#fff;font-size:14px}
+  .bar-track{
+    height:13px;
+    border-radius:999px;
+    background:rgba(255,255,255,.12);
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.10);
+  }
+  .bar-fill{
+    display:block;
+    height:100%;
+    width:var(--w);
+    border-radius:999px;
+    background:linear-gradient(90deg,var(--c1,#f7dfaa),var(--c2,#087f5b));
+    box-shadow:0 0 20px rgba(247,223,170,.22);
+  }
+  .bar-row span:last-child{color:#f7dfaa;text-align:right;font-weight:950}
+  .capture-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .capture-card{
+    padding:16px;
+    border-radius:18px;
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.14);
+    transition:transform .24s ease,border-color .24s ease,background .24s ease;
+  }
+  .capture-card:hover{transform:translateY(-4px);border-color:rgba(247,223,170,.34);background:rgba(255,255,255,.15)}
+  .capture-card small{display:block;color:#aebfd0;font-weight:900;text-transform:uppercase;letter-spacing:.06em}
+  .capture-card strong{display:block;margin:7px 0;color:#f7dfaa;font-size:26px;line-height:1}
+  .capture-card p{font-size:13px;color:#e1edf7}
+  .capture-card.weak strong{color:#ffca7a}
+  .capture-card.risk strong{color:#ff9d9d}
+  .rhythm-analytics{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .rhythm-column{
+    padding:20px;
+    border-radius:22px;
+    background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.065));
+    border:1px solid rgba(255,255,255,.14);
+  }
+  .rhythm-column h3{margin:0 0 14px;color:#fff}
+  .rhythm-bars{display:grid;gap:10px}
+  .mini-bar{display:grid;grid-template-columns:120px 1fr 42px;gap:10px;align-items:center;color:#eaf3fb;font-size:14px;font-weight:800}
+  .mini-track{height:10px;border-radius:999px;background:rgba(255,255,255,.12);overflow:hidden}
+  .mini-track span{display:block;height:100%;width:var(--w);border-radius:999px;background:linear-gradient(90deg,#f7dfaa,#087f5b)}
+  .role-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:12px;align-items:stretch}
+  .role-lane{
+    padding:20px;
+    border-radius:22px;
+    background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.065));
+    border:1px solid rgba(255,255,255,.16);
+  }
+  .role-lane h3{margin:0 0 12px;color:#f7dfaa}
+  .role-lane ul{margin:0;padding-left:18px;color:#e7f0f8}
+  .role-lane li{margin:7px 0}
+  .flow-arrow{display:grid;place-items:center;color:#f7dfaa;font-size:26px;font-weight:950}
+  .platform-analytics{
+    margin-top:18px;
+    display:grid;
+    grid-template-columns:.85fr 1.1fr 1.05fr;
+    gap:12px;
+  }
+  .pa-card{
+    position:relative;
+    overflow:hidden;
+    padding:18px;
+    border-radius:20px;
+    background:linear-gradient(145deg,rgba(7,16,29,.92),rgba(21,47,70,.82));
+    border:1px solid rgba(var(--platform-a),.24);
+    color:#fff;
+    box-shadow:0 20px 54px rgba(7,16,29,.16);
+  }
+  .pa-card:before{
+    content:"";
+    position:absolute;
+    inset:0 0 auto 0;
+    height:4px;
+    background:linear-gradient(90deg,rgba(var(--platform-a),.95),rgba(var(--platform-b),.80));
+  }
+  .pa-card small{display:block;color:#f7dfaa;font-size:11px;font-weight:950;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+  .pa-card h4{margin:0 0 9px;font-size:19px;color:#fff}
+  .pa-card p{margin:0;color:#dce8f3;font-size:14px;line-height:1.6}
+  .pa-metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .pa-metric{
+    padding:11px;
+    border-radius:14px;
+    background:rgba(255,255,255,.09);
+    border:1px solid rgba(255,255,255,.12);
+  }
+  .pa-metric b{display:block;color:#fff;font-size:20px;line-height:1}
+  .pa-metric span{display:block;margin-top:4px;color:#b9c8d7;font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.05em}
+  .pa-output-list{display:grid;gap:8px}
+  .pa-output-list span{
+    display:flex;
+    justify-content:space-between;
+    gap:8px;
+    padding:9px 10px;
+    border-radius:13px;
+    background:rgba(255,255,255,.09);
+    border:1px solid rgba(255,255,255,.11);
+    color:#eaf3fb;
+    font-size:13px;
+    font-weight:800;
+  }
+  .pa-output-list b{color:#f7dfaa}
   @media(max-width:1540px){
     .chapter-rail{display:none}
   }
@@ -883,6 +1053,10 @@
     .chapter-rail{display:none}
     .execution-system{grid-template-columns:1fr}
     .chapter-transition{padding:22px}
+    .analytics-grid,.score-ring-wrap,.rhythm-analytics,.platform-analytics{grid-template-columns:1fr}
+    .capture-grid{grid-template-columns:1fr 1fr}
+    .role-flow{grid-template-columns:1fr}
+    .flow-arrow{transform:rotate(90deg)}
   }
   @media(max-width:620px){
     html,body{width:100%;max-width:100%;overflow-x:hidden}
@@ -902,6 +1076,12 @@
     .chapter-transition h2{font-size:34px}
     .section.final{padding:24px}
     .output-tile{min-height:0}
+    .analytics-section{padding:22px}
+    .score-ring{width:190px;height:190px;margin:auto}
+    .capture-grid{grid-template-columns:1fr}
+    .bar-row{grid-template-columns:1fr}
+    .bar-row span:last-child{text-align:left}
+    .mini-bar{grid-template-columns:1fr}
   }
   @media print{
     @page{margin:14mm}
@@ -909,7 +1089,7 @@
     body{background:#fff!important;color:#111!important}
     body:before,body:after,.scroll-progress,.chapter-rail,.section:after,.platform-card:after,.final:after,.evidence-panel:after{display:none!important}
     .wrap{max-width:none;padding:0}
-    .about,.hero,.section,.company-banner,.platform-card,.final,.evidence-pack,.chapter-transition{
+    .about,.hero,.section,.company-banner,.platform-card,.final,.evidence-pack,.chapter-transition,.analytics-section{
       break-inside:avoid;
       page-break-inside:avoid;
       background:#fff!important;
@@ -919,7 +1099,7 @@
     }
     .hero p,.about-title,.about-glass p,.profile-card p,.section-note,.box p,.info-card p,.info-card li,.final-card p,.final-card li,.evidence-panel p,.download-box p{color:#222!important}
     .section-head h2,.hero h1,.about-left h1,.company-banner h2,.final .section-head h2,.evidence-pack .section-head h2{color:#111!important}
-    .final-card,.evidence-panel,.download-box,.snapshot-copy,.snapshot-stack,.snapshot-item,.lane-card,.output-tile,.final-row{
+    .final-card,.evidence-panel,.download-box,.snapshot-copy,.snapshot-stack,.snapshot-item,.lane-card,.output-tile,.final-row,.analytics-card,.pa-card,.role-lane,.rhythm-column{
       background:#fff!important;
       color:#111!important;
       border:1px solid #d5dde7!important;
@@ -934,7 +1114,7 @@
 </head>
 <body>
 <div class="scroll-progress" aria-hidden="true"><span></span></div>
-<nav class="chapter-rail" aria-label="Audit chapters">
+<aside class="chapter-rail" aria-label="Audit chapters">
   <a href="#about" data-section="about"><span>01</span>About</a>
   <a href="#audit" data-section="audit"><span>02</span>Audit</a>
   <a href="#score" data-section="score"><span>03</span>Score</a>
@@ -944,7 +1124,7 @@
   <a href="#group" data-section="group"><span>07</span>Group</a>
   <a href="#final" data-section="final"><span>08</span>Final</a>
   <a href="#evidence-pack" data-section="evidence-pack"><span>09</span>Evidence</a>
-</nav>
+</aside>
 <div class="wrap">
 
   <section class="about" id="about">
@@ -967,14 +1147,14 @@
   </section>
 
   <header class="hero" id="audit">
-    <span class="eyebrow">Memaar Digital Audit - V12 visual experience</span>
+    <span class="eyebrow">Memaar Digital Audit - V13 analytics edition</span>
     <h1>Digital Audit & Optimized Content System</h1>
     <p>A compact, company-by-company audit built from the current data supplied by Memaar. The focus is practical: understand the digital situation, keep what works, fix what blocks action, and run a controlled monthly content engine.</p>
     <div class="executive-snapshot">
       <div class="snapshot-copy">
         <span class="snapshot-kicker">Executive Snapshot</span>
         <strong>Memaar has reach. The next professional step is action routing.</strong>
-        <p>The audit shows a reach-strong but conversion-weak digital operation. V12 turns the findings into a more polished executive experience: stronger visual hierarchy, clearer platform roles, better buyer paths, and one monthly engine managed with discipline.</p>
+        <p>The audit shows a reach-strong but conversion-weak digital operation. V13 adds an analytical layer: clearer charts, platform-level data storytelling, stronger buyer paths, and one monthly engine managed with discipline.</p>
       </div>
       <div class="snapshot-stack">
         <div class="snapshot-item"><span class="snapshot-num">01</span><div><b>Visibility is proven</b><span>Facebook, TikTok, YouTube, Instagram, LinkedIn, and Search already create attention.</span></div></div>
@@ -989,6 +1169,33 @@
       <div class="hero-stat"><b>5</b><span>SEO blogs per month for website growth.</span></div>
     </div>
   </header>
+
+  <section class="section analytics-section" id="score-ring">
+    <div class="section-head"><div><h2>Digital Readiness Score</h2><p class="section-note">A compact visual summary of Memaar's current digital readiness: strong reach, weaker conversion architecture, and limited attribution data.</p></div><span class="pill gold">65/100</span></div>
+    <div class="analytics-grid">
+      <div class="analytics-card">
+        <div class="score-ring-wrap">
+          <svg class="score-ring" viewBox="0 0 180 180" role="img" aria-label="Digital readiness score 65 out of 100">
+            <defs><linearGradient id="scoreGradient" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#f7dfaa"/><stop offset="100%" stop-color="#087f5b"/></linearGradient></defs>
+            <circle cx="90" cy="90" r="68" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="14"/>
+            <circle cx="90" cy="90" r="68" fill="none" stroke="url(#scoreGradient)" stroke-width="14" stroke-linecap="round" stroke-dasharray="278 428" transform="rotate(-90 90 90)"/>
+            <text x="90" y="84" text-anchor="middle" class="score">65/100</text>
+            <text x="90" y="108" text-anchor="middle" class="label">Digital Readiness</text>
+          </svg>
+          <div class="score-labels">
+            <span>Strong visibility <b>Proven</b></span>
+            <span>Weak action routing <b>Priority</b></span>
+            <span>Missing ROI proof <b>Data gap</b></span>
+          </div>
+        </div>
+      </div>
+      <div class="analytics-card">
+        <h3>Score Meaning</h3>
+        <p>Reach is strong. Conversion architecture and attribution are still weak. Memaar is generating attention at scale, but more of that attention needs to become profile action, website movement, inquiry routing, and measurable next steps.</p>
+        <div class="chart-note">The 65/100 score reflects a reach-strong, conversion-weak digital operation. Memaar is generating attention at scale. The next step is converting that attention into measurable inquiries.</div>
+      </div>
+    </div>
+  </section>
 
   <section class="section" id="purpose">
     <div class="section-head"><div><h2>Audit Purpose</h2><p class="section-note">This audit uses the data currently available and turns it into a professional content and execution system. It is built to support a management decision, not to inflate the report with unsupported claims.</p></div><span class="pill gold">Compact audit</span></div>
@@ -1010,7 +1217,7 @@
       <div class="box score-card"><strong>56</strong><b>Paid Media Quality</b><div class="meter"><span style="width:56%"></span></div><p>Ads are part of the rhythm, but premium creative quality and clear objectives are required.</p></div>
       <div class="box score-card"><strong>45</strong><b>Data & Reporting</b><div class="meter"><span style="width:45%"></span></div><p>Still limited because ad spend, CPL, leads, bookings, and sales data are not confirmed.</p></div>
     </div>
-    <div class="callout"><b>The 65/100 score reflects a reach-strong, conversion-weak digital operation.</b> Memaar is generating attention at scale. The next step is converting that attention into measurable inquiries.</div>
+    <div class="callout">The 65/100 score reflects a reach-strong, conversion-weak digital operation. Memaar is generating attention at scale. The next step is converting that attention into measurable inquiries.</div>
     <p class="source-note"><b>Data boundary:</b> the score is not a revenue or sales score. Confirmed ad spend, CPL, qualified leads, bookings, sales, and revenue were not provided.</p>
   </section>
 
@@ -1080,6 +1287,36 @@
     </div>
   </section>
 
+  <section class="section analytics-section" id="attention-chart">
+    <div class="section-head"><div><h2>Where Memaar's Attention Currently Exists</h2><p class="section-note">A horizontal view of verified attention sources. Facebook Developments dominates the attention base, but attention alone is not the same as lead generation.</p></div><span class="pill gold">Reach comparison</span></div>
+    <div class="analytics-card">
+      <div class="bar-chart">
+        <div class="bar-row"><b>Facebook Developments</b><div class="bar-track"><span class="bar-fill" style="--w:100%;--c1:#f7dfaa;--c2:#2855a4"></span></div><span>4.1M</span></div>
+        <div class="bar-row"><b>YouTube Developments</b><div class="bar-track"><span class="bar-fill" style="--w:9.7%;--c1:#b4232d;--c2:#f7dfaa"></span></div><span>396.5K</span></div>
+        <div class="bar-row"><b>TikTok Group</b><div class="bar-track"><span class="bar-fill" style="--w:5.1%;--c1:#4094b5;--c2:#b4232d"></span></div><span>209.6K</span></div>
+        <div class="bar-row"><b>YouTube Group</b><div class="bar-track"><span class="bar-fill" style="--w:1.7%;--c1:#b4232d;--c2:#f7dfaa"></span></div><span>68.9K</span></div>
+        <div class="bar-row"><b>TikTok Developments</b><div class="bar-track"><span class="bar-fill" style="--w:1.7%;--c1:#4094b5;--c2:#b4232d"></span></div><span>68.5K</span></div>
+        <div class="bar-row"><b>Instagram Developments</b><div class="bar-track"><span class="bar-fill" style="--w:.7%;--c1:#b4232d;--c2:#6d3fd1"></span></div><span>25K</span></div>
+        <div class="bar-row"><b>Instagram Group</b><div class="bar-track"><span class="bar-fill" style="--w:.28%;--c1:#b4232d;--c2:#6d3fd1"></span></div><span>3.6K</span></div>
+        <div class="bar-row"><b>Facebook Group</b><div class="bar-track"><span class="bar-fill" style="--w:.18%;--c1:#2855a4;--c2:#f7dfaa"></span></div><span>924</span></div>
+      </div>
+      <div class="chart-note">Facebook Developments is carrying the verified attention base, but attention alone is not the same as lead generation.</div>
+    </div>
+  </section>
+
+  <section class="section analytics-section" id="action-capture-chart">
+    <div class="section-head"><div><h2>Visibility vs Action Capture</h2><p class="section-note">The conversion problem is visible across multiple channels: high attention is not yet becoming enough link taps, followers, subscribers, button clicks, or tracked inquiries.</p></div><span class="pill red">Action gap</span></div>
+    <div class="capture-grid">
+      <div class="capture-card weak"><small>Instagram link tap rate</small><strong>1.7%</strong><p>8 link taps from 476 profile visits. Weak profile-to-action movement.</p></div>
+      <div class="capture-card risk"><small>TikTok follower capture</small><strong>0.37%</strong><p>254 followers from 68.5K viewers. Visibility is not converting into repeat audience strongly enough.</p></div>
+      <div class="capture-card risk"><small>YouTube subscriber capture</small><strong>0.076%</strong><p>301 subscribers from 396.5K all-time views. Historical trust exists, but capture is weak.</p></div>
+      <div class="capture-card weak"><small>Facebook engagement capture</small><strong>0.76%</strong><p>31K engagement from 4.1M views. Slightly weak for such large reach.</p></div>
+      <div class="capture-card"><small>LinkedIn action gap</small><strong>6.7% ER</strong><p>Strong engagement quality, but 0 custom button clicks means action routing is incomplete.</p></div>
+      <div class="capture-card"><small>Website CTR</small><strong>5.4%</strong><p>Useful search signal, but project pages and buyer-routing paths can still improve.</p></div>
+    </div>
+    <div class="chart-note">Memaar is strong in visibility but weak in conversion, follower capture, and action routing.</div>
+  </section>
+
   <section class="section" id="current">
     <div class="section-head"><div><h2>Current Content Rhythm</h2><p class="section-note">The current system already has a useful base. The problem is not only volume; the problem is structure, quality, platform adaptation, and routing.</p></div><span class="pill blue">Current</span></div>
     <div class="rhythm-grid">
@@ -1103,6 +1340,47 @@
     <div class="distribution-rule"><b>Important distribution rule:</b><p>The 15 monthly short videos are the same core clips, not separate shoots for every account. Each clip will be adapted for Facebook, Instagram, TikTok, and YouTube Shorts. Memaar Developments versions will focus on buyer acquisition and project inquiries. Memaar Group versions will use the same content intelligently for corporate reputation, team credibility, milestones, community, and company trust.</p></div>
   </section>
 
+  <section class="section analytics-section" id="rhythm-chart">
+    <div class="section-head"><div><h2>From Posting Activity to Content Engine</h2><p class="section-note">The optimized system increases strategic coverage while keeping production controlled through repurposing and platform adaptation.</p></div><span class="pill green">Rhythm comparison</span></div>
+    <div class="rhythm-analytics">
+      <div class="rhythm-column">
+        <h3>Current Monthly/Cycle Output</h3>
+        <div class="rhythm-bars">
+          <div class="mini-bar"><b>Blogs</b><div class="mini-track"><span style="--w:20%"></span></div><strong>1</strong></div>
+          <div class="mini-bar"><b>Medium videos</b><div class="mini-track"><span style="--w:60%"></span></div><strong>3</strong></div>
+          <div class="mini-bar"><b>Ads</b><div class="mini-track"><span style="--w:80%"></span></div><strong>4</strong></div>
+          <div class="mini-bar"><b>Shorts</b><div class="mini-track"><span style="--w:47%"></span></div><strong>7</strong></div>
+        </div>
+      </div>
+      <div class="rhythm-column">
+        <h3>Optimized Monthly Engine</h3>
+        <div class="rhythm-bars">
+          <div class="mini-bar"><b>SEO blogs</b><div class="mini-track"><span style="--w:100%"></span></div><strong>5</strong></div>
+          <div class="mini-bar"><b>Medium videos</b><div class="mini-track"><span style="--w:60%"></span></div><strong>3</strong></div>
+          <div class="mini-bar"><b>Premium ads</b><div class="mini-track"><span style="--w:80%"></span></div><strong>4</strong></div>
+          <div class="mini-bar"><b>Core shorts</b><div class="mini-track"><span style="--w:100%"></span></div><strong>15</strong></div>
+          <div class="mini-bar"><b>Posts</b><div class="mini-track"><span style="--w:80%"></span></div><strong>8</strong></div>
+          <div class="mini-bar"><b>Carousels</b><div class="mini-track"><span style="--w:60%"></span></div><strong>5</strong></div>
+          <div class="mini-bar"><b>LinkedIn posts</b><div class="mini-track"><span style="--w:60%"></span></div><strong>5</strong></div>
+          <div class="mini-bar"><b>Cleanup</b><div class="mini-track"><span style="--w:28%"></span></div><strong>1</strong></div>
+        </div>
+      </div>
+    </div>
+    <div class="chart-note">The 15 shorts are the same 15 core clips adapted across Facebook, Instagram, TikTok, and YouTube Shorts. The new rhythm increases strategic coverage while keeping production controlled through repurposing.</div>
+  </section>
+
+  <section class="section analytics-section" id="company-role-flow">
+    <div class="section-head"><div><h2>Company Role Clarity</h2><p class="section-note">Each brand should carry a specific job in the system so content does not become scattered or repetitive across pages.</p></div><span class="pill gold">Role flow</span></div>
+    <div class="role-flow">
+      <div class="role-lane"><h3>Memaar Developments</h3><ul><li>Buyer acquisition</li><li>Project proof</li><li>Project inquiries</li><li>Paid creative testing</li><li>Short-form discovery</li></ul></div>
+      <div class="flow-arrow">-></div>
+      <div class="role-lane"><h3>Memaar Group</h3><ul><li>Corporate reputation</li><li>Leadership</li><li>Team credibility</li><li>Milestones</li><li>Community trust</li></ul></div>
+      <div class="flow-arrow">-></div>
+      <div class="role-lane"><h3>Sister Companies</h3><ul><li>Design proof</li><li>Construction proof</li><li>Buyer education</li><li>Partner credibility</li><li>Support-only distribution</li></ul></div>
+    </div>
+    <div class="chart-note">Not every page should do the same job. Each brand must have a clear role so content does not become scattered.</div>
+  </section>
+
   <div class="chapter-transition developments"><span>Chapter 01</span><h2>Memaar Developments</h2><p>Main buyer-acquisition brand. This is where project proof, social reach, ads, website routing, and inquiry paths should be concentrated.</p></div>
   <div class="company-banner" id="developments"><div><h2>1. Memaar Developments</h2><p>Main buyer-acquisition brand. This is where project proof, social reach, ads, website routing, and inquiry paths should be concentrated.</p></div><div class="score"><b>Primary</b>Growth brand</div></div>
 
@@ -1120,6 +1398,11 @@
         <section class="info-card good"><small>Good</small><ul><li>Official website exists and gives Memaar a controlled destination outside social media.</li><li>Search Console proves organic demand is present.</li><li>Project pages can become high-intent landing pages.</li><li>WhatsApp fits local real estate buyer behavior.</li></ul></section>
         <section class="info-card weak"><small>Weak</small><ul><li>The blog system is not strong enough for the amount of search opportunity.</li><li>Project pages need clearer payment-plan, location, construction-status, and inquiry CTAs.</li><li>Linktree can dilute intent if too many unrelated or low-priority links are shown.</li><li>Google Business/Profile routing needs to be clearer than a generic search/share path.</li><li>Website clicks are not yet connected to lead/source reporting.</li></ul></section>
         <section class="info-card risk"><small>Main Risk</small><p>Traffic can be wasted if visitors cannot quickly find project details, payment plans, construction status, WhatsApp, or site-visit action.</p></section>
+      </div>
+      <div class="platform-analytics">
+        <div class="pa-card"><small>01 Overall Analytics</small><h4>Conversion hub</h4><p>The website is the place where attention should become a clearer buyer path. Social reach should point here when people need project depth, payment-plan clarity, location proof, and WhatsApp action.</p></div>
+        <div class="pa-card"><small>02 Current Verified Data</small><h4>Search signal</h4><div class="pa-metrics"><span><b>550</b> clicks</span><span><b>10.3K</b> impressions</span><span><b>5.4%</b> CTR</span><span><b>7</b> avg position</span></div></div>
+        <div class="pa-card"><small>03 Execution Output System</small><h4>Output forecast</h4><div class="pa-output-list"><span>5 SEO blogs per month</span><span>Project page refreshes</span><span>Linktree and WhatsApp QA</span><span>Monthly CTA cleanup</span></div><p>Expected improvement areas: stronger search freshness, clearer project education, cleaner inquiry routing, and better future source tracking.</p></div>
       </div>
       <section class="execution-system">
         <div class="exec-left">
@@ -1174,6 +1457,11 @@
         <section class="info-card weak"><small>Weak</small><ul><li>Reach is not mapped to leads.</li><li>Viewing depth is weaker than the total view number suggests.</li><li>Net audience change is negative despite very large reach.</li><li>Some content may be too awareness-heavy instead of buyer-intent focused.</li></ul></section>
         <section class="info-card risk"><small>Main Risk</small><p>High views can create a false sense of performance if they stay passive. Without source tracking, Memaar cannot know which Facebook content creates real buyer action.</p></section>
       </div>
+      <div class="platform-analytics">
+        <div class="pa-card"><small>01 Overall Analytics</small><h4>Reach engine</h4><p>Facebook Developments is carrying the verified attention base. The business job is to convert that reach into project proof, retargeting pools, and clearer inquiry routes without claiming unverified lead outcomes.</p></div>
+        <div class="pa-card"><small>02 Current Verified Data</small><h4>Attention base</h4><div class="pa-metrics"><span><b>4.1M</b> views</span><span><b>1.6M</b> viewers</span><span><b>31K</b> engagement</span><span><b>98%</b> non-follower views</span></div></div>
+        <div class="pa-card"><small>03 Execution Output System</small><h4>Output forecast</h4><div class="pa-output-list"><span>15 shared core shorts adapted for Facebook</span><span>4 premium Facebook ad creatives</span><span>Selected posts from the 8-post pool</span><span>Monthly CTA and retargeting cleanup</span></div><p>Expected improvement areas: stronger project clarity, better ad creative quality, cleaner WhatsApp/project routing, and more useful future attribution.</p></div>
+      </div>
       <section class="execution-system">
         <div class="exec-left">
           <div class="exec-label">How I Will Act - Execution System</div>
@@ -1224,6 +1512,11 @@
         <section class="info-card good"><small>Good</small><ul><li>Commercially relevant audience age fit.</li><li>Reels are already driving discovery and interactions.</li><li>Strong platform for project visuals, construction proof, and aspirational buyer content.</li><li>Highlights and pinned reels can become a project trust archive.</li></ul></section>
         <section class="info-card weak"><small>Weak</small><ul><li>Only 8 external link taps from 476 profile visits, around 1.7%.</li><li>-67 net follower change despite active content.</li><li>The 24,972 vs 1.9M views conflict needs metric-definition reconciliation.</li><li>Follower geography looks diluted: Peshawar appears at only 5.9% in the supplied follower-location screen.</li><li>Bio, highlights, pinned content, and link path need stronger buyer routing.</li></ul></section>
         <section class="info-card risk"><small>Main Risk</small><p>Instagram may look active but fail commercially if viewers do not quickly understand the project, location, payment plan, trust proof, and next step.</p></section>
+      </div>
+      <div class="platform-analytics">
+        <div class="pa-card"><small>01 Overall Analytics</small><h4>Profile trust layer</h4><p>Instagram has the right visual environment for real estate, but the current action capture is weak. The profile needs to make projects easier to understand and next steps easier to follow.</p></div>
+        <div class="pa-card"><small>02 Current Verified Data</small><h4>Profile action gap</h4><div class="pa-metrics"><span><b>10,266</b> followers</span><span><b>24,972</b> views</span><span><b>476</b> profile visits</span><span><b>8</b> link taps</span></div></div>
+        <div class="pa-card"><small>03 Execution Output System</small><h4>Output forecast</h4><div class="pa-output-list"><span>15 shared core clips adapted as Reels</span><span>5 Instagram carousels</span><span>Selected posts from the 8-post pool</span><span>Highlights, bio, and link cleanup</span></div><p>Expected improvement areas: stronger profile trust, better project explainers, clearer link path, and more trackable profile actions.</p></div>
       </div>
       <section class="execution-system">
         <div class="exec-left">
@@ -1276,6 +1569,11 @@
         <section class="info-card weak"><small>Weak</small><ul><li>Follower conversion is weak compared with total viewers.</li><li>Profile views are present, but routing from profile to inquiry is not proven.</li><li>Content can look unstructured if it is not organized into repeatable themes.</li><li>Lead routing is not proven from the current files.</li></ul></section>
         <section class="info-card risk"><small>Main Risk</small><p>TikTok can generate attention without serious buyer movement if content is entertainment-only or if profile routing is unclear.</p></section>
       </div>
+      <div class="platform-analytics">
+        <div class="pa-card"><small>01 Overall Analytics</small><h4>Discovery tester</h4><p>TikTok Developments is useful for fast hook testing and short buyer education. Its weakness is not visibility; it is follower capture and the lack of proven inquiry routing.</p></div>
+        <div class="pa-card"><small>02 Current Verified Data</small><h4>Short-form signal</h4><div class="pa-metrics"><span><b>68.5K</b> viewers</span><span><b>42.8K</b> new viewers</span><span><b>91.5K</b> post views</span><span><b>254</b> followers</span></div></div>
+        <div class="pa-card"><small>03 Execution Output System</small><h4>Output forecast</h4><div class="pa-output-list"><span>15 shared core clips adapted for TikTok</span><span>4-5 repeatable hook formats</span><span>Profile routing cleanup</span><span>Winning clips reused across platforms</span></div><p>Expected improvement areas: clearer first-second hooks, stronger repeat audience signals, better project labeling, and cleaner movement to official channels.</p></div>
+      </div>
       <section class="execution-system">
         <div class="exec-left">
           <div class="exec-label">How I Will Act - Execution System</div>
@@ -1327,6 +1625,11 @@
         <section class="info-card weak"><small>Weak</small><ul><li>301 subscribers from 396.5K views is about 0.076%, a weak subscriber conversion signal.</li><li>Recent traction is low compared with historical reach.</li><li>Titles, thumbnails, playlists, pinned comments, and descriptions need stronger buyer-intent packaging.</li><li>The channel may be treated like a storage folder instead of an inquiry-support archive.</li></ul></section>
         <section class="info-card risk"><small>Main Risk</small><p>If YouTube remains unstructured, strong historical content will not translate into project confidence, search traffic, or inquiry movement.</p></section>
       </div>
+      <div class="platform-analytics">
+        <div class="pa-card"><small>01 Overall Analytics</small><h4>Trust archive</h4><p>YouTube Developments has historical trust value, but the channel needs structure. The fix is playlists, titles, thumbnails, pinned CTAs, Shorts, and buyer-focused medium videos.</p></div>
+        <div class="pa-card"><small>02 Current Verified Data</small><h4>Historical base</h4><div class="pa-metrics"><span><b>396.5K</b> views</span><span><b>301</b> subscribers</span><span><b>2.6K</b> likes</span><span><b>595</b> shares</span></div></div>
+        <div class="pa-card"><small>03 Execution Output System</small><h4>Output forecast</h4><div class="pa-output-list"><span>3 medium videos per month</span><span>15 shared core clips as Shorts</span><span>Project playlists and pinned CTAs</span><span>Title and thumbnail refreshes</span></div><p>Expected improvement areas: stronger project education, better channel structure, clearer buyer routing, and more useful long-term video proof.</p></div>
+      </div>
       <section class="execution-system">
         <div class="exec-left">
           <div class="exec-label">How I Will Act - Execution System</div>
@@ -1377,6 +1680,11 @@
         <section class="info-card good"><small>Good</small><ul><li>6.7% engagement rate is a quality signal.</li><li>Follower base and search appearances show professional discoverability.</li><li>Good platform for leadership, team, project milestones, partnerships, and corporate proof.</li><li>Can support employer brand and investor confidence.</li></ul></section>
         <section class="info-card weak"><small>Weak</small><ul><li>0 comments, 0 reposts, and 0 custom button clicks show weak action.</li><li>Scale is still low compared with Facebook and Instagram.</li><li>LinkedIn needs original professional writing, not reposted short captions.</li><li>The custom button/CTA path needs attention.</li></ul></section>
         <section class="info-card risk"><small>Main Risk</small><p>LinkedIn may look present but not professionally influential if it only reposts generic updates and never drives profile actions or meaningful conversation.</p></section>
+      </div>
+      <div class="platform-analytics">
+        <div class="pa-card"><small>01 Overall Analytics</small><h4>Professional credibility</h4><p>LinkedIn Developments shows a useful engagement-rate signal, but action is missing. It should carry proof for partners, investors, vendors, employees, and serious buyers.</p></div>
+        <div class="pa-card"><small>02 Current Verified Data</small><h4>Quality signal</h4><div class="pa-metrics"><span><b>1,569</b> impressions</span><span><b>6.7%</b> engagement rate</span><span><b>1,094</b> followers</span><span><b>0</b> button clicks</span></div></div>
+        <div class="pa-card"><small>03 Execution Output System</small><h4>Output forecast</h4><div class="pa-output-list"><span>3 of 5 LinkedIn posts across Memaar pages</span><span>Project and partnership proof</span><span>Executive-tone copywriting</span><span>Page CTA cleanup</span></div><p>Expected improvement areas: stronger professional trust, clearer page action, better project credibility, and more meaningful business-context content.</p></div>
       </div>
       <section class="execution-system">
         <div class="exec-left">
@@ -1433,6 +1741,11 @@
         <section class="info-card weak"><small>Weak</small><ul><li>Very low reach compared with Developments.</li><li>Engagement is weak and not enough to carry performance expectations.</li><li>Role confusion can split attention from Developments.</li></ul></section>
         <section class="info-card risk"><small>Main Risk</small><p>If Group and Developments post the same thing without role clarity, the audience path becomes confusing and the stronger Developments brand loses focus.</p></section>
       </div>
+      <div class="platform-analytics">
+        <div class="pa-card"><small>01 Overall Analytics</small><h4>Corporate support lane</h4><p>Facebook Group should not compete with Developments. Its job is controlled reputation support, official company proof, and routing people back to the buyer-acquisition lane when needed.</p></div>
+        <div class="pa-card"><small>02 Current Verified Data</small><h4>Low-volume signal</h4><div class="pa-metrics"><span><b>924</b> views</span><span><b>547</b> viewers</span><span><b>37</b> engagement</span><span><b>-77%</b> views trend</span></div></div>
+        <div class="pa-card"><small>03 Execution Output System</small><h4>Output forecast</h4><div class="pa-output-list"><span>6-8 selected clips from the shared 15</span><span>2-3 corporate posts from the post pool</span><span>Official updates and milestones</span><span>Monthly CTA cleanup</span></div><p>Expected improvement areas: clearer brand role, stronger company proof, less audience confusion, and better routing toward Developments.</p></div>
+      </div>
       <section class="execution-system">
         <div class="exec-left">
           <div class="exec-label">How I Will Act - Execution System</div>
@@ -1477,6 +1790,11 @@
         <section class="info-card good"><small>Good</small><ul><li>Some non-follower discovery exists.</li><li>Can be useful for company-level visual identity.</li><li>Good place for team and milestone content.</li></ul></section>
         <section class="info-card weak"><small>Weak</small><ul><li>0 external link taps from 101 profile visits.</li><li>Small reach and small follower base compared with Developments.</li><li>Reach and profile activity are both declining in the supplied period.</li><li>Not enough evidence to treat it as a buyer lead engine.</li></ul></section>
         <section class="info-card risk"><small>Main Risk</small><p>If the Group Instagram tries to do the same job as Developments, it may create account confusion without producing business value.</p></section>
+      </div>
+      <div class="platform-analytics">
+        <div class="pa-card"><small>01 Overall Analytics</small><h4>Corporate identity layer</h4><p>Instagram Group should explain the company behind the projects. It needs a cleaner role, not duplicate buyer-acquisition content from Developments.</p></div>
+        <div class="pa-card"><small>02 Current Verified Data</small><h4>Profile action gap</h4><div class="pa-metrics"><span><b>3,550</b> views</span><span><b>806</b> reach</span><span><b>101</b> profile visits</span><span><b>0</b> link taps</span></div></div>
+        <div class="pa-card"><small>03 Execution Output System</small><h4>Output forecast</h4><div class="pa-output-list"><span>6-8 selected Reels from the shared 15</span><span>2-3 Group posts from the post pool</span><span>Team and milestone visuals</span><span>Bio and highlight cleanup</span></div><p>Expected improvement areas: clearer corporate identity, improved profile trust, cleaner routing, and less overlap with Developments.</p></div>
       </div>
       <section class="execution-system">
         <div class="exec-left">
@@ -1523,6 +1841,11 @@
         <section class="info-card weak"><small>Weak</small><ul><li>Buyer conversion is not proven.</li><li>No confirmed lead or WhatsApp outcome data.</li><li>Needs clearer relationship to Developments and project funnels.</li><li>High visibility should not be mistaken for qualified project demand.</li></ul></section>
         <section class="info-card risk"><small>Main Risk</small><p>Strong TikTok views can become vanity reach if viewers are not routed toward official project channels or company trust signals.</p></section>
       </div>
+      <div class="platform-analytics">
+        <div class="pa-card"><small>01 Overall Analytics</small><h4>Reputation reach</h4><p>TikTok Group has strong visibility for the corporate brand. It should be used as a reputation channel with clear routing, not as an unstructured project-acquisition page.</p></div>
+        <div class="pa-card"><small>02 Current Verified Data</small><h4>Verified reach base</h4><div class="pa-metrics"><span><b>209.6K</b> post views</span><span><b>2.4K</b> profile views</span><span><b>760</b> followers</span><span><b>1.4K</b> shares</span></div></div>
+        <div class="pa-card"><small>03 Execution Output System</small><h4>Output forecast</h4><div class="pa-output-list"><span>8-10 selected clips from the shared 15</span><span>3-4 culture and team themes</span><span>Profile routing checks</span><span>Clear Developments handoff</span></div><p>Expected improvement areas: stronger reputation reach, clearer brand relationship, better profile trust, and reduced confusion in buyer routing.</p></div>
+      </div>
       <section class="execution-system">
         <div class="exec-left">
           <div class="exec-label">How I Will Act - Execution System</div>
@@ -1568,6 +1891,11 @@
         <section class="info-card weak"><small>Weak</small><ul><li>Recent traction is weak.</li><li>India 39% vs Pakistan 33% creates local buyer relevance risk.</li><li>Splitting project videos between Group and Developments can weaken clarity.</li></ul></section>
         <section class="info-card risk"><small>Main Risk</small><p>If buyer-focused project videos are routed through Group, audience quality and buyer relevance may be weaker than Developments.</p></section>
       </div>
+      <div class="platform-analytics">
+        <div class="pa-card"><small>01 Overall Analytics</small><h4>Audience alignment risk</h4><p>YouTube Group has historical activity, but geography creates buyer-fit risk. Buyer-focused project videos should be routed through Developments, while Group stays corporate.</p></div>
+        <div class="pa-card"><small>02 Current Verified Data</small><h4>Channel signal</h4><div class="pa-metrics"><span><b>68.9K</b> views</span><span><b>130</b> subscribers</span><span><b>193</b> shares</span><span><b>39% / 33%</b> India / Pakistan</span></div></div>
+        <div class="pa-card"><small>03 Execution Output System</small><h4>Output forecast</h4><div class="pa-output-list"><span>6-8 selected Shorts from the shared 15</span><span>Corporate videos only when relevant</span><span>Playlist and routing cleanup</span><span>Buyer content routed to Developments</span></div><p>Expected improvement areas: clearer channel purpose, better audience alignment, stronger corporate archive, and less project-channel confusion.</p></div>
+      </div>
       <section class="execution-system">
         <div class="exec-left">
           <div class="exec-label">How I Will Act - Execution System</div>
@@ -1612,6 +1940,11 @@
         <section class="info-card good"><small>Good</small><ul><li>Search appearances show the company can be found.</li><li>LinkedIn is suitable for team, leadership, partnerships, and company updates.</li><li>Useful for investors, partners, employees, vendors, and high-trust audiences.</li></ul></section>
         <section class="info-card weak"><small>Weak</small><ul><li>0 posts in 30 days means the page is dormant.</li><li>Low impressions and engagement rate compared with Developments.</li><li>No action proof from the supplied data.</li></ul></section>
         <section class="info-card risk"><small>Main Risk</small><p>A dormant Group LinkedIn page can make the company look less active or less professionally organized than it is.</p></section>
+      </div>
+      <div class="platform-analytics">
+        <div class="pa-card"><small>01 Overall Analytics</small><h4>Dormant reputation asset</h4><p>LinkedIn Group is underused, but it is a strong fit for leadership, company culture, partnerships, hiring, milestones, and executive-level credibility.</p></div>
+        <div class="pa-card"><small>02 Current Verified Data</small><h4>Activity gap</h4><div class="pa-metrics"><span><b>112</b> impressions</span><span><b>2.7%</b> engagement rate</span><span><b>223</b> followers</span><span><b>0</b> posts in 30 days</span></div></div>
+        <div class="pa-card"><small>03 Execution Output System</small><h4>Output forecast</h4><div class="pa-output-list"><span>2 of 5 LinkedIn posts across Memaar pages</span><span>Leadership and milestone content</span><span>Company proof assets</span><span>Monthly profile cleanup</span></div><p>Expected improvement areas: stronger professional presence, consistent corporate proof, better search impression quality, and a more active executive-facing page.</p></div>
       </div>
       <section class="execution-system">
         <div class="exec-left">
@@ -1721,7 +2054,7 @@
     </div>
   </section>
 
-<footer>Memaar Digital Audit & Optimized Content System V12 - prepared by Hamza Khan. Built from the current supplied data only.</footer>
+<footer>Memaar Digital Audit & Optimized Content System V13 - prepared by Hamza Khan. Built from the current supplied data only.</footer>
 </div>
 <script>
 (() => {
@@ -1784,7 +2117,7 @@
   ].join(',');
 
   const revealTargets = Array.from(document.querySelectorAll(revealSelectors));
-  if (!reduceMotion && 'IntersectionObserver' in window) {
+  if (!reduceMotion && 'IntersectionObserver' in window && !window.location.hash) {
     document.body.classList.add('reveal-enabled');
     revealTargets.forEach((el, index) => {
       el.classList.add('reveal-target');
@@ -1798,6 +2131,26 @@
       });
     }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
     revealTargets.forEach((el) => revealObserver.observe(el));
+    const revealViewport = () => {
+      revealTargets.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.bottom > -140 && rect.top < window.innerHeight + 260) el.classList.add('is-visible');
+      });
+    };
+    if (window.location.hash) {
+      window.setTimeout(() => {
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+          target.scrollIntoView({ block: 'start' });
+          window.scrollBy(0, -20);
+        }
+        revealViewport();
+        onScroll();
+      }, 120);
+    }
+    railLinks.forEach((link) => {
+      link.addEventListener('click', () => window.setTimeout(revealViewport, 180));
+    });
   }
 })();
 </script>
