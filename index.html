@@ -384,12 +384,67 @@
     --v11-soft:0 18px 54px rgba(12,23,36,.10);
   }
   body{
+    position:relative;
+    overflow-x:hidden;
+    isolation:isolate;
     color:var(--v11-ink);
     background:
-      radial-gradient(circle at 8% 4%,rgba(247,223,170,.42),transparent 27%),
-      radial-gradient(circle at 88% 10%,rgba(64,148,181,.22),transparent 28%),
-      radial-gradient(circle at 12% 88%,rgba(8,127,91,.16),transparent 30%),
       linear-gradient(180deg,#f7efe2 0%,#f9fbff 32%,#fff 100%);
+  }
+  body:before{
+    content:"";
+    position:fixed;
+    inset:-32%;
+    z-index:0;
+    pointer-events:none;
+    background:
+      radial-gradient(circle at 10% 12%,rgba(247,223,170,.50),transparent 25%),
+      radial-gradient(circle at 84% 10%,rgba(64,148,181,.30),transparent 27%),
+      radial-gradient(circle at 18% 86%,rgba(8,127,91,.24),transparent 30%),
+      radial-gradient(circle at 88% 80%,rgba(109,63,209,.20),transparent 28%),
+      linear-gradient(115deg,rgba(255,255,255,.08),rgba(247,223,170,.08),rgba(64,148,181,.08));
+    background-size:140% 140%;
+    filter:blur(42px) saturate(1.08);
+    opacity:.82;
+    transform:translate3d(0,0,0) scale(1.03);
+    animation:cinematicAura 42s ease-in-out infinite alternate;
+    will-change:transform,background-position;
+  }
+  body:after{
+    content:"";
+    position:fixed;
+    inset:-18%;
+    z-index:0;
+    pointer-events:none;
+    background:
+      conic-gradient(from 110deg at 50% 50%,rgba(247,223,170,.10),rgba(64,148,181,.10),rgba(8,127,91,.08),rgba(255,255,255,0),rgba(247,223,170,.10));
+    filter:blur(58px);
+    opacity:.42;
+    mix-blend-mode:multiply;
+    animation:cinematicVeil 58s linear infinite;
+    will-change:transform;
+  }
+  .wrap{position:relative;z-index:1}
+  @keyframes cinematicAura{
+    0%{transform:translate3d(-2.5%,-1.5%,0) scale(1.02);background-position:0% 38%}
+    35%{transform:translate3d(2.2%,-2.4%,0) scale(1.055);background-position:58% 18%}
+    70%{transform:translate3d(-1.2%,2.3%,0) scale(1.035);background-position:92% 78%}
+    100%{transform:translate3d(2.8%,1.4%,0) scale(1.065);background-position:18% 100%}
+  }
+  @keyframes cinematicVeil{
+    0%{transform:rotate(0deg) scale(1)}
+    50%{transform:rotate(10deg) scale(1.06)}
+    100%{transform:rotate(20deg) scale(1.02)}
+  }
+  .about,.hero,.company-banner,.execution-system,.final,.evidence-pack{
+    background-size:220% 220%!important;
+    animation:panelCinematicDrift 24s ease-in-out infinite alternate;
+    will-change:background-position;
+  }
+  @keyframes panelCinematicDrift{
+    0%{background-position:0% 50%}
+    45%{background-position:72% 32%}
+    100%{background-position:100% 76%}
   }
   .wrap{max-width:1220px;padding:28px 22px 86px}
   .about,.hero,.section,.company-banner,.platform-card{
@@ -597,7 +652,7 @@
     @page{margin:14mm}
     *{animation:none!important;transition:none!important;box-shadow:none!important;text-shadow:none!important}
     body{background:#fff!important;color:#111!important}
-    body:before,.section:after,.platform-card:after,.final:after,.evidence-panel:after{display:none!important}
+    body:before,body:after,.section:after,.platform-card:after,.final:after,.evidence-panel:after{display:none!important}
     .wrap{max-width:none;padding:0}
     .about,.hero,.section,.company-banner,.platform-card,.final,.evidence-pack{
       break-inside:avoid;
