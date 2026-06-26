@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Memaar Digital Audit & Optimized Content System - V10</title>
+<title>Memaar Digital Audit & Optimized Content System - V11</title>
 <style>
   :root{
     --ink:#0f1a24;--ink2:#182838;--muted:#5f6d7c;--line:#e3e9f0;--paper:#f8f1e4;--white:#fff;
@@ -128,7 +128,7 @@
   .benchmark-close p{margin:0;color:#dbe7f3}
   .close-badge{padding:10px 12px;border-radius:999px;background:rgba(247,223,170,.13);border:1px solid rgba(247,223,170,.28);color:#f7dfaa;font-size:11px;font-weight:950;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
   @media(max-width:980px){.output-strip,.final-lanes,.benchmark-hero,.benchmark-summary,.bench-grid,.benchmark-close{grid-template-columns:1fr}.benchmark-panel{padding:22px}.bench-card{min-height:0}.close-badge{justify-self:start}}
-  /* V10 screenshot-match polish */
+  /* Retained premium screenshot-match polish */
   .wrap{max-width:1220px}
   .about{border-radius:34px;background:linear-gradient(135deg,#101820 0%,#182b3e 64%,#24384d 100%);border:1px solid rgba(255,255,255,.12);box-shadow:0 28px 90px rgba(16,24,32,.24);color:#fff;position:relative}
   .about:before{content:"";position:absolute;left:-120px;bottom:-170px;width:390px;height:390px;border-radius:50%;border:1px solid rgba(255,255,255,.12)}
@@ -184,7 +184,7 @@
   .final-grid{grid-template-columns:1fr 1fr}
   footer{padding-bottom:6px}
   @media(max-width:980px){.about-inner,.next-card-grid,#current .rhythm-grid,.diagnostic-grid,.execution-system,.final-grid{grid-template-columns:1fr}.verified,.meaning,.good,.weak,.risk{grid-column:auto}.about-inner{padding:26px}.next-output-card{min-height:0}.exec-left{margin:14px}.exec-right{padding:14px}.matrix-row{grid-template-columns:38px 1fr}.matrix-row p{grid-column:1 / -1}}
-  /* V10 final recommendation repair and premium upgrade */
+  /* Final recommendation premium upgrade */
   .section.final{
     padding:30px;
     border-radius:34px;
@@ -367,6 +367,257 @@
   }
   .download-button:hover{transform:translateY(-4px);box-shadow:0 30px 66px rgba(247,223,170,.30);filter:saturate(1.08)}
   .download-note{font-size:14px!important;color:#dce8f3!important}
+
+  /* V11 boardroom premium system */
+  :root{
+    --v11-ink:#0c1724;
+    --v11-muted:#526579;
+    --v11-line:rgba(153,172,193,.32);
+    --v11-gold:#f7dfaa;
+    --v11-gold-deep:#b88a2b;
+    --v11-green:#087f5b;
+    --v11-cyan:#4094b5;
+    --v11-blue:#2855a4;
+    --v11-navy:#07101d;
+    --v11-panel:rgba(255,255,255,.90);
+    --v11-shadow:0 28px 92px rgba(12,23,36,.14);
+    --v11-soft:0 18px 54px rgba(12,23,36,.10);
+  }
+  body{
+    color:var(--v11-ink);
+    background:
+      radial-gradient(circle at 8% 4%,rgba(247,223,170,.42),transparent 27%),
+      radial-gradient(circle at 88% 10%,rgba(64,148,181,.22),transparent 28%),
+      radial-gradient(circle at 12% 88%,rgba(8,127,91,.16),transparent 30%),
+      linear-gradient(180deg,#f7efe2 0%,#f9fbff 32%,#fff 100%);
+  }
+  .wrap{max-width:1220px;padding:28px 22px 86px}
+  .about,.hero,.section,.company-banner,.platform-card{
+    box-shadow:var(--v11-shadow);
+    border-color:var(--v11-line);
+  }
+  .section,.platform-card{
+    background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(248,251,255,.94));
+    backdrop-filter:blur(18px);
+  }
+  .section-head{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    gap:18px;
+    align-items:start;
+  }
+  .section-head h2{
+    letter-spacing:-.042em;
+  }
+  .section-note{
+    max-width:880px;
+  }
+  .hero{
+    padding:50px;
+    background:
+      radial-gradient(circle at 86% 10%,rgba(247,223,170,.24),transparent 31%),
+      radial-gradient(circle at 5% 100%,rgba(8,127,91,.20),transparent 38%),
+      linear-gradient(135deg,#07101d 0%,#132a43 48%,#243c54 100%);
+  }
+  .hero h1{max-width:960px}
+  .hero p{max-width:860px}
+  .executive-snapshot{
+    display:grid;
+    grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);
+    gap:16px;
+    margin-top:30px;
+  }
+  .snapshot-copy,.snapshot-stack{
+    border:1px solid rgba(255,255,255,.16);
+    background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.06));
+    border-radius:24px;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+  }
+  .snapshot-copy{padding:24px}
+  .snapshot-kicker{
+    display:block;
+    color:var(--v11-gold);
+    font-size:12px;
+    font-weight:950;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  .snapshot-copy strong{
+    display:block;
+    color:#fff;
+    font-size:clamp(24px,3vw,38px);
+    line-height:1.02;
+    letter-spacing:-.035em;
+    margin-bottom:10px;
+  }
+  .snapshot-copy p{font-size:16px;color:#dce8f3}
+  .snapshot-stack{
+    display:grid;
+    gap:10px;
+    padding:14px;
+  }
+  .snapshot-item{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:12px;
+    padding:14px;
+    border-radius:18px;
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.12);
+    transition:transform .24s ease,border-color .24s ease,background .24s ease;
+  }
+  .snapshot-item:hover{
+    transform:translateY(-4px);
+    border-color:rgba(247,223,170,.42);
+    background:rgba(255,255,255,.16);
+  }
+  .snapshot-num{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    color:#101820;
+    background:linear-gradient(135deg,#fff2c5,var(--v11-gold));
+    font-weight:950;
+    font-size:12px;
+  }
+  .snapshot-item b{display:block;color:#fff;margin-bottom:3px}
+  .snapshot-item span{display:block;color:#dce8f3;font-size:13px;line-height:1.5}
+  .hero-grid{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:18px}
+  .hero-stat{
+    background:rgba(255,255,255,.10);
+    transition:transform .24s ease,border-color .24s ease,background .24s ease;
+  }
+  .hero-stat:hover{background:rgba(255,255,255,.16);border-color:rgba(247,223,170,.38)}
+  .source-note{
+    margin:16px 0 0;
+    padding:13px 15px;
+    border-radius:16px;
+    color:#435368;
+    background:rgba(248,251,255,.88);
+    border:1px solid #dfe7ef;
+    font-size:13px;
+    line-height:1.55;
+  }
+  .source-note b{color:#101820}
+  .box,.rhythm-card,.info-card,.sister-card{
+    background:linear-gradient(180deg,#fff,#f9fbfd);
+    box-shadow:var(--v11-soft);
+  }
+  .score-card strong,.next-output-card strong,.output-tile strong{font-variant-numeric:tabular-nums}
+  .execution-system{
+    position:relative;
+    background:
+      radial-gradient(circle at 84% 4%,rgba(247,223,170,.24),transparent 28%),
+      radial-gradient(circle at 0% 96%,rgba(64,148,181,.20),transparent 34%),
+      linear-gradient(135deg,#06111f 0%,#142b43 42%,#07594f 100%)!important;
+    border:1px solid rgba(247,223,170,.22);
+  }
+  .execution-system:before{
+    content:"";
+    position:absolute;
+    inset:0 0 auto 0;
+    height:5px;
+    background:linear-gradient(90deg,var(--v11-gold-deep),var(--v11-gold),var(--v11-green));
+    opacity:1;
+    transform:none;
+  }
+  .exec-label{
+    box-shadow:0 12px 30px rgba(184,138,43,.18);
+  }
+  .exec-left li{line-height:1.58}
+  .matrix-row{
+    background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.07));
+  }
+  .final-grid{align-items:start}
+  .final-card.approval-card{
+    grid-column:1 / -1;
+    border-color:rgba(247,223,170,.30)!important;
+    background:
+      radial-gradient(circle at 88% 0%,rgba(247,223,170,.16),transparent 36%),
+      linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.075))!important;
+  }
+  .proposal-close{
+    margin-top:18px;
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:16px;
+    align-items:center;
+    padding:20px 22px;
+    border-radius:22px;
+    color:#2b210c;
+    background:linear-gradient(135deg,#fff8e6,#fffdf5);
+    border:1px solid rgba(247,223,170,.74);
+    box-shadow:0 18px 44px rgba(0,0,0,.14);
+  }
+  .proposal-close b{display:block;color:#7c5609;margin-bottom:4px}
+  .proposal-close p{margin:0;color:#3f3421}
+  .proposal-pill{
+    padding:11px 14px;
+    border-radius:999px;
+    background:linear-gradient(135deg,#101820,#20384f);
+    color:#f7dfaa;
+    font-size:12px;
+    font-weight:950;
+    letter-spacing:.07em;
+    text-transform:uppercase;
+    white-space:nowrap;
+  }
+  .evidence-pack{
+    background:
+      radial-gradient(circle at 8% 0%,rgba(247,223,170,.22),transparent 30%),
+      radial-gradient(circle at 94% 92%,rgba(64,148,181,.28),transparent 36%),
+      linear-gradient(135deg,#07101d 0%,#142b43 48%,#094e50 100%)!important;
+  }
+  .download-button:after{content:"";width:8px;height:8px;border-top:2px solid #101820;border-right:2px solid #101820;transform:rotate(45deg)}
+  @media(max-width:980px){
+    .executive-snapshot{grid-template-columns:1fr}
+    .section-head,.proposal-close{grid-template-columns:1fr}
+    .proposal-pill{justify-self:start}
+  }
+  @media(max-width:620px){
+    html,body{width:100%;max-width:100%;overflow-x:hidden}
+    .wrap{padding:16px 10px 54px}
+    .about,.hero,.section,.company-banner,.platform-card{width:100%;max-width:100%;border-radius:24px;overflow:hidden}
+    .about-inner,.about-left,.about-right,.profile-card,.about-glass,.snapshot-copy,.snapshot-stack,.snapshot-item,.hero-stat,.box,.rhythm-card,.info-card,.final-card,.evidence-panel,.download-box{min-width:0;max-width:100%}
+    .hero{padding:28px 22px}
+    .hero h1{font-size:42px}
+    .about-left h1{font-size:64px}
+    .section-head h2{font-size:32px}
+    .eyebrow,.pill,.badges span{max-width:100%;white-space:normal;line-height:1.35}
+    h1,h2,h3,p,li,span,b,strong{overflow-wrap:break-word}
+    .snapshot-copy,.snapshot-stack{border-radius:20px}
+    .hero-grid{grid-template-columns:1fr}
+    .platform-card{padding:20px}
+  }
+  @media print{
+    @page{margin:14mm}
+    *{animation:none!important;transition:none!important;box-shadow:none!important;text-shadow:none!important}
+    body{background:#fff!important;color:#111!important}
+    body:before,.section:after,.platform-card:after,.final:after,.evidence-panel:after{display:none!important}
+    .wrap{max-width:none;padding:0}
+    .about,.hero,.section,.company-banner,.platform-card,.final,.evidence-pack{
+      break-inside:avoid;
+      page-break-inside:avoid;
+      background:#fff!important;
+      color:#111!important;
+      border:1px solid #d5dde7!important;
+      margin-bottom:14px;
+    }
+    .hero p,.about-title,.about-glass p,.profile-card p,.section-note,.box p,.info-card p,.info-card li,.final-card p,.final-card li,.evidence-panel p,.download-box p{color:#222!important}
+    .section-head h2,.hero h1,.about-left h1,.company-banner h2,.final .section-head h2,.evidence-pack .section-head h2{color:#111!important}
+    .final-card,.evidence-panel,.download-box,.snapshot-copy,.snapshot-stack,.snapshot-item,.lane-card,.output-tile,.final-row{
+      background:#fff!important;
+      color:#111!important;
+      border:1px solid #d5dde7!important;
+    }
+    .download-button{border:1px solid #222!important;background:#fff!important;color:#111!important}
+    .download-button:after{display:none}
+    footer{color:#333!important}
+  }
   @media(max-width:980px){.final-grid,.output-strip,.final-lanes,.evidence-layout,.evidence-points{grid-template-columns:1fr}.section.final,.evidence-pack{padding:24px}.final-card.wide{padding:22px}.download-meta{grid-template-columns:1fr}}
   @media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
 </style>
@@ -377,26 +628,38 @@
   <section class="about" id="about">
     <div class="about-inner">
       <div class="about-left">
-        <span class="eyebrow">Before the Audit</span>
+        <span class="eyebrow">Audit Lead</span>
         <h1>Hamza<br> Khan</h1>
-        <p class="about-title">Content creator, website builder, video editor, social media operator, and AI-assisted digital audit strategist.</p>
+        <p class="about-title">Digital content strategist, website builder, video editor, social media operator, and AI-assisted audit specialist.</p>
         <div class="about-glass">
           <b>About Me</b>
-          <p>I am not approaching Memaar as basic posting work. My goal is to build a practical content and digital-performance system that connects Memaar's website, social media, short-form videos, ads, search presence, and inquiry paths into one cleaner growth engine.</p>
+          <p>I am not approaching Memaar as basic posting work. My goal is to build a practical content and digital-performance system that connects Memaar's website, social media, short-form videos, ads, search presence, and inquiry paths into one disciplined growth engine.</p>
         </div>
       </div>
       <div class="about-right">
-        <div class="profile-card"><b>What I Do</b><p>I combine research, content planning, video production thinking, website/SEO structure, platform audits, and reporting so every upload has a purpose: reach, trust, education, routing, and inquiry support.</p></div>
-        <div class="profile-card"><b>What I Will Build for Memaar</b><p>A professional monthly content machine: 5 blogs, 3 medium videos, 15 core short-form videos adapted across Memaar platforms, 4 premium Facebook ads, 8 posts, 5 Instagram carousels, and 5 LinkedIn posts.</p></div>
-        <div class="profile-card"><b>Why This Matters</b><p>Memaar already has attention. The real opportunity is to make that attention more premium, more consistent, more trackable, and more useful for buyer confidence and project inquiries.</p></div>
+        <div class="profile-card"><b>What I Do</b><p>I combine research, content planning, video production thinking, website/SEO structure, platform audits, and reporting so each upload has a defined role: reach, trust, education, routing, or inquiry support.</p></div>
+        <div class="profile-card"><b>What I Will Build for Memaar</b><p>A controlled monthly content engine: 5 blogs, 3 medium videos, 15 core short-form videos adapted across Memaar platforms, 4 premium Facebook ads, 8 posts, 5 Instagram carousels, and 5 LinkedIn posts.</p></div>
+        <div class="profile-card"><b>Why This Matters</b><p>Memaar already has attention. The opportunity is to make that attention more premium, more consistent, more trackable, and more useful for buyer confidence and project inquiries.</p></div>
       </div>
     </div>
   </section>
 
   <header class="hero" id="audit">
-    <span class="eyebrow">Memaar Digital Audit - V10 company divided</span>
+    <span class="eyebrow">Memaar Digital Audit - V11 boardroom edition</span>
     <h1>Digital Audit & Optimized Content System</h1>
     <p>A compact, company-by-company audit built from the current data supplied by Memaar. The focus is practical: understand the digital situation, keep what works, fix what blocks action, and run a controlled monthly content engine.</p>
+    <div class="executive-snapshot">
+      <div class="snapshot-copy">
+        <span class="snapshot-kicker">Executive Snapshot</span>
+        <strong>Memaar has reach. The next professional step is action routing.</strong>
+        <p>The audit shows a reach-strong but conversion-weak digital operation. V11 turns the findings into a cleaner operating proposal: stronger content structure, better platform roles, clearer buyer paths, and one monthly engine managed with discipline.</p>
+      </div>
+      <div class="snapshot-stack">
+        <div class="snapshot-item"><span class="snapshot-num">01</span><div><b>Visibility is proven</b><span>Facebook, TikTok, YouTube, Instagram, LinkedIn, and Search already create attention.</span></div></div>
+        <div class="snapshot-item"><span class="snapshot-num">02</span><div><b>Conversion structure is weak</b><span>Link taps, button clicks, routing, and source tracking need stronger architecture.</span></div></div>
+        <div class="snapshot-item"><span class="snapshot-num">03</span><div><b>The fix is a controlled engine</b><span>One monthly system should connect content, website, CTAs, project proof, and profile cleanup.</span></div></div>
+      </div>
+    </div>
     <div class="hero-grid">
       <div class="hero-stat"><b>65/100</b><span>Digital readiness score: reach-strong, conversion-weak.</span></div>
       <div class="hero-stat"><b>4.1M</b><span>Facebook Developments 90-day views.</span></div>
@@ -406,12 +669,13 @@
   </header>
 
   <section class="section" id="purpose">
-    <div class="section-head"><div><h2>Audit Purpose</h2><p class="section-note">This report is not designed to complain about missing data. It uses the data currently available and turns it into a professional content and execution system.</p></div><span class="pill gold">Compact audit</span></div>
+    <div class="section-head"><div><h2>Audit Purpose</h2><p class="section-note">This audit uses the data currently available and turns it into a professional content and execution system. It is built to support a management decision, not to inflate the report with unsupported claims.</p></div><span class="pill gold">Compact audit</span></div>
     <div class="purpose-grid">
       <div class="box"><b>What This Audit Does</b><p>Reviews Memaar Developments, Memaar Group, and sister/partner channels using the supplied platform numbers, website/search data, and current content rhythm.</p></div>
       <div class="box"><b>What It Avoids</b><p>It does not invent ROI, revenue, CPL, qualified leads, bookings, sales, or WhatsApp lead numbers because those were not confirmed in the current files.</p></div>
       <div class="box"><b>What It Builds</b><p>A realistic monthly system: 15 core short clips, 5 blogs, 4 premium Facebook ads, 8 posts, 5 carousels, 5 LinkedIn posts, and 3 medium videos.</p></div>
     </div>
+    <p class="source-note"><b>Source basis:</b> supplied platform analytics, website/Search Console data, Linktree and profile checks, screenshots, research notes, and the CEO Evidence Pack linked at the end of this audit.</p>
   </section>
 
   <section class="section" id="score">
@@ -425,6 +689,7 @@
       <div class="box score-card"><strong>45</strong><b>Data & Reporting</b><div class="meter"><span style="width:45%"></span></div><p>Still limited because ad spend, CPL, leads, bookings, and sales data are not confirmed.</p></div>
     </div>
     <div class="callout"><b>The 65/100 score reflects a reach-strong, conversion-weak digital operation.</b> Memaar is generating attention at scale. The next step is converting that attention into measurable inquiries.</div>
+    <p class="source-note"><b>Data boundary:</b> the score is not a revenue or sales score. Confirmed ad spend, CPL, qualified leads, bookings, sales, and revenue were not provided.</p>
   </section>
 
   <section class="section" id="benchmark">
@@ -502,7 +767,7 @@
   </section>
 
   <section class="section" id="next">
-    <div class="section-head"><div><h2>Next Content Rhythm -> Optimized System</h2><p class="section-note">This is the recommended monthly content engine for Memaar. The output is higher than the current system, but it is not random volume. The same strong content will be adapted professionally for each platform and each Memaar brand role.</p></div><span class="pill green">Optimized monthly output</span></div>
+    <div class="section-head"><div><h2>Next Content Rhythm -> Optimized System</h2><p class="section-note">This is the recommended monthly content engine for Memaar. The output is higher than the current system, but it is controlled volume, not content for appearance. The same strong content will be adapted professionally for each platform and each Memaar brand role.</p></div><span class="pill green">Optimized monthly output</span></div>
     <div class="next-card-grid">
       <div class="next-output-card"><strong>5</strong><b>Website Blogs</b><p>Five buyer-intent blogs per month for search, project education, and website freshness.</p></div>
       <div class="next-output-card"><strong>15</strong><b>Core Short Videos</b><p>Fifteen strong reels/shorts created once, then optimized and uploaded across Facebook, Instagram, TikTok, and YouTube Shorts.</p></div>
@@ -513,7 +778,7 @@
       <div class="next-output-card"><strong>3</strong><b>Medium Videos</b><p>Three medium videos as the monthly production backbone: project proof, buyer education, and authority/trust.</p></div>
       <div class="next-output-card"><strong>1</strong><b>Monthly Cleanup</b><p>One monthly cleanup of bios, links, CTAs, project pages, WhatsApp routing, highlights, and old content organization.</p></div>
     </div>
-    <div class="distribution-rule"><b>Important distribution rule:</b><p>The 15 monthly short videos are the same core clips, not separate random shoots for every account. Each clip will be adapted for Facebook, Instagram, TikTok, and YouTube Shorts. Memaar Developments versions will focus on buyer acquisition and project inquiries. Memaar Group versions will use the same content intelligently for corporate reputation, team credibility, milestones, community, and company trust.</p></div>
+    <div class="distribution-rule"><b>Important distribution rule:</b><p>The 15 monthly short videos are the same core clips, not separate shoots for every account. Each clip will be adapted for Facebook, Instagram, TikTok, and YouTube Shorts. Memaar Developments versions will focus on buyer acquisition and project inquiries. Memaar Group versions will use the same content intelligently for corporate reputation, team credibility, milestones, community, and company trust.</p></div>
   </section>
 
   <div class="company-banner" id="developments"><div><h2>1. Memaar Developments</h2><p>Main buyer-acquisition brand. This is where project proof, social reach, ads, website routing, and inquiry paths should be concentrated.</p></div><div class="score"><b>Primary</b>Growth brand</div></div>
@@ -537,7 +802,7 @@
         <div class="exec-left">
           <div class="exec-label">How I Will Act - Execution System</div>
           <h4>Fix + monthly output in one operating block</h4>
-          <ul><li>I will turn the website into the main conversion hub by building content around real buyer searches: payment plans, location value, project updates, investment guidance, and construction proof.</li><li>I will plan and publish 5 SEO-focused blogs per month, each connected to a project page, WhatsApp action, or direct inquiry CTA.</li><li>I will clean the Linktree/website journey so the first visible actions are project inquiry, payment plan, site visit, Google Business/Profile, and WhatsApp - not random browsing.</li><li>I will keep secondary channels such as Pinterest out of priority routing unless the page is controlled, professional, and useful for design or project proof.</li><li>I will run a monthly website/profile QA covering broken links, project-page clarity, CTA visibility, blog freshness, WhatsApp routing, and project status accuracy.</li><li>I will use the website as the stable base that all social platforms point back to when buyers need deeper proof.</li></ul>
+          <ul><li>I will turn the website into the main conversion hub by building content around real buyer searches: payment plans, location value, project updates, investment guidance, and construction proof.</li><li>I will plan and publish 5 SEO-focused blogs per month, each connected to a project page, WhatsApp action, or direct inquiry CTA.</li><li>I will clean the Linktree/website journey so the first visible actions are project inquiry, payment plan, site visit, Google Business/Profile, and WhatsApp - not unfocused browsing.</li><li>I will keep secondary channels such as Pinterest out of priority routing unless the page is controlled, professional, and useful for design or project proof.</li><li>I will run a monthly website/profile QA covering broken links, project-page clarity, CTA visibility, blog freshness, WhatsApp routing, and project status accuracy.</li><li>I will use the website as the stable base that all social platforms point back to when buyers need deeper proof.</li></ul>
         </div>
         <div class="exec-right">
           <div class="exec-label light">Monthly Output Matrix</div>
@@ -685,7 +950,7 @@
         <section class="info-card verified"><small>Verified Data</small><p>365-day TikTok analytics show 68.5K viewers, 42.8K new viewers, 254 total followers, 249 net followers, 91.5K post views, 1.3K profile views, 4.9K likes, 414 comments, and 148 shares for Memaar Developments.</p></section>
         <section class="info-card meaning"><small>Business Meaning</small><p>TikTok is producing visibility but follower conversion is weak: 254 followers from 68.5K viewers is around 0.37%. The opportunity is to improve hooks and turn casual viewers into repeat audience.</p></section>
         <section class="info-card good"><small>Good</small><ul><li>TikTok visibility is now partially verified.</li><li>Short-form real estate proof can work well when hooks are simple and visual.</li><li>Construction progress, location value, and buyer mistakes can be turned into repeatable formats.</li><li>A good testing ground before pushing the best clips harder on Facebook/Instagram.</li></ul></section>
-        <section class="info-card weak"><small>Weak</small><ul><li>Follower conversion is weak compared with total viewers.</li><li>Profile views are present, but routing from profile to inquiry is not proven.</li><li>Content can look like random upload if not organized into repeatable themes.</li><li>Lead routing is not proven from the current files.</li></ul></section>
+        <section class="info-card weak"><small>Weak</small><ul><li>Follower conversion is weak compared with total viewers.</li><li>Profile views are present, but routing from profile to inquiry is not proven.</li><li>Content can look unstructured if it is not organized into repeatable themes.</li><li>Lead routing is not proven from the current files.</li></ul></section>
         <section class="info-card risk"><small>Main Risk</small><p>TikTok can generate attention without serious buyer movement if content is entertainment-only or if profile routing is unclear.</p></section>
       </div>
       <section class="execution-system">
@@ -734,7 +999,7 @@
       </div>
       <div class="diagnostic-grid">
         <section class="info-card verified"><small>Verified Data</small><p>396.5K all-time views, 301 subscribers, 2.6K likes, 65 comments, 595 shares, and 498 recent 7-day views. Geography visible in the supplied screenshot: Pakistan 72%.</p></section>
-        <section class="info-card meaning"><small>Business Meaning</small><p>YouTube has historical trust value, but recent momentum is weak. The fix is not random uploads; the channel needs project playlists, stronger thumbnails, clearer titles, and buyer-focused medium videos.</p></section>
+        <section class="info-card meaning"><small>Business Meaning</small><p>YouTube has historical trust value, but recent momentum is weak. The fix is not unstructured uploading; the channel needs project playlists, stronger thumbnails, clearer titles, and buyer-focused medium videos.</p></section>
         <section class="info-card good"><small>Good</small><ul><li>Strong historical views prove old content can continue building trust.</li><li>Pakistan-led geography makes Developments the cleaner home for buyer-focused YouTube videos.</li><li>YouTube is valuable for serious buyers who want deeper proof.</li><li>Longer videos can support project pages and WhatsApp inquiries.</li><li>Shorts can reuse the same monthly core clips without creating separate production burden.</li></ul></section>
         <section class="info-card weak"><small>Weak</small><ul><li>301 subscribers from 396.5K views is about 0.076%, a weak subscriber conversion signal.</li><li>Recent traction is low compared with historical reach.</li><li>Titles, thumbnails, playlists, pinned comments, and descriptions need stronger buyer-intent packaging.</li><li>The channel may be treated like a storage folder instead of an inquiry-support archive.</li></ul></section>
         <section class="info-card risk"><small>Main Risk</small><p>If YouTube remains unstructured, strong historical content will not translate into project confidence, search traffic, or inquiry movement.</p></section>
@@ -929,7 +1194,7 @@
       </div>
       <div class="diagnostic-grid">
         <section class="info-card verified"><small>Verified Data</small><p>TikTok Group shows 209.6K post views, 2.4K profile views, 171.1K total viewers, 123.6K new viewers, 760 total followers, 424 net followers, 4.8K likes, 233 comments, and 1.4K shares in the supplied 365-day screenshots.</p></section>
-        <section class="info-card meaning"><small>Business Meaning</small><p>TikTok Group has surprisingly strong visibility signals. It should be used carefully as a corporate awareness layer, not as a random content dump.</p></section>
+        <section class="info-card meaning"><small>Business Meaning</small><p>TikTok Group has notably strong visibility signals. It should be used carefully as a corporate awareness layer, not as an unstructured content feed.</p></section>
         <section class="info-card good"><small>Good</small><ul><li>Strong post-view signal compared with other Group platforms.</li><li>Profile views suggest viewers are checking the brand after watching.</li><li>Shares indicate some content is worth distributing.</li><li>Good place for human/team/culture content.</li></ul></section>
         <section class="info-card weak"><small>Weak</small><ul><li>Buyer conversion is not proven.</li><li>No confirmed lead or WhatsApp outcome data.</li><li>Needs clearer relationship to Developments and project funnels.</li><li>High visibility should not be mistaken for qualified project demand.</li></ul></section>
         <section class="info-card risk"><small>Main Risk</small><p>Strong TikTok views can become vanity reach if viewers are not routed toward official project channels or company trust signals.</p></section>
@@ -983,7 +1248,7 @@
         <div class="exec-left">
           <div class="exec-label">How I Will Act - Execution System</div>
           <h4>Fix + monthly output in one operating block</h4>
-          <ul><li>I will keep YouTube Group for corporate credibility, leadership, and group-level storytelling, while future buyer-focused videos go through Memaar Developments.</li><li>I will adapt only selected YouTube Shorts from the shared 15 clips where the content fits group reputation or company culture.</li><li>I will avoid random uploads and organize existing videos so viewers understand what the Group channel is for.</li><li>I will use stronger titles and pinned routing so Pakistani buyers are guided toward Developments/project information.</li></ul>
+          <ul><li>I will keep YouTube Group for corporate credibility, leadership, and group-level storytelling, while future buyer-focused videos go through Memaar Developments.</li><li>I will adapt only selected YouTube Shorts from the shared 15 clips where the content fits group reputation or company culture.</li><li>I will avoid unstructured uploads and organize existing videos so viewers understand what the Group channel is for.</li><li>I will use stronger titles and pinned routing so Pakistani buyers are guided toward Developments/project information.</li></ul>
         </div>
         <div class="exec-right">
           <div class="exec-label light">Monthly Output Matrix</div>
@@ -1066,11 +1331,11 @@
   <section class="section final" id="final">
     <div class="section-head"><div><h2>Final Recommendation</h2><p class="section-note">Memaar does not need random content volume. It needs a controlled monthly content engine that keeps reach active, makes projects easier to understand, improves profile trust, and routes attention toward useful actions.</p></div><span class="pill gold">Execution proposal</span></div>
     <div class="final-grid">
-      <div class="final-card wide"><h3>Controlled Monthly Engine</h3><p>This is the operating system Hamza will run: one shared monthly content engine, split intelligently between buyer acquisition, corporate credibility, website growth, and profile cleanup. The focus is not to post more for appearance. The focus is to make every content piece easier to understand, easier to trust, and easier to route toward action.</p>
+      <div class="final-card wide"><h3>Controlled Monthly Content Engine</h3><p>This is the operating system Hamza will run: one shared monthly content engine, split intelligently between buyer acquisition, corporate credibility, website growth, and profile cleanup. The monthly system includes 15 core short-form clips, 5 SEO blogs, 4 premium Facebook ad creatives, 8 cross-platform posts, 5 Instagram carousels, 5 LinkedIn posts, 3 medium videos, and 1 cleanup session. The focus is not to post more for appearance. The focus is to make every content piece easier to understand, easier to trust, and easier to route toward action.</p>
         <div class="output-strip">
           <div class="output-tile"><strong>15</strong><span>core short clips adapted across Facebook, Instagram, TikTok, and YouTube Shorts</span></div>
-          <div class="output-tile"><strong>5</strong><span>SEO blogs connected to buyer questions and project pages</span></div>
-          <div class="output-tile"><strong>4</strong><span>premium Facebook ad creatives with stronger hooks and CTAs</span></div>
+          <div class="output-tile"><strong>5</strong><span>SEO blogs connected to buyer questions, project pages, and search demand</span></div>
+          <div class="output-tile"><strong>4</strong><span>premium Facebook ad creatives with stronger hooks, offers, and CTAs</span></div>
           <div class="output-tile"><strong>1</strong><span>monthly cleanup for bios, links, CTAs, highlights, and routing</span></div>
         </div>
         <div class="final-lanes">
@@ -1079,17 +1344,18 @@
           <div class="lane-card"><b>Support Lane</b><p>Sister companies only when they add buyer education, design proof, construction proof, or credibility.</p></div>
         </div>
       </div>
-      <div class="final-card"><h3>What I Will Do</h3><ul><li>Run a monthly content system built around 15 core short-form videos adapted across Facebook, Instagram, TikTok, and YouTube Shorts.</li><li>Publish 5 buyer-intent SEO blogs that connect website traffic to project pages, WhatsApp actions, and relevant CTAs.</li><li>Create 4 premium Facebook ad creatives per month so paid budget is supported by strong hooks, message clarity, and better visual execution.</li><li>Manage 8 cross-platform posts, 5 Instagram carousels, 5 LinkedIn posts, and 3 medium-format videos without creating random overload.</li><li>Clean bios, links, CTAs, highlights, routing, project labels, and profile quality every month so users understand where to go next.</li></ul></div>
+      <div class="final-card"><h3>What Hamza Will Run</h3><ul><li>Operate one monthly content system built around 15 core short-form videos adapted across Facebook, Instagram, TikTok, and YouTube Shorts.</li><li>Publish 5 buyer-intent SEO blogs that connect website traffic to project pages, WhatsApp actions, and relevant CTAs.</li><li>Create 4 premium Facebook ad creatives per month so paid budget is supported by strong hooks, message clarity, and better visual execution.</li><li>Manage 8 cross-platform posts, 5 Instagram carousels, 5 LinkedIn posts, and 3 medium-format videos without creating unnecessary volume.</li><li>Clean bios, links, CTAs, highlights, routing, project labels, and profile quality every month so users understand where to go next.</li></ul></div>
       <div class="final-card"><h3>Monthly Output Summary</h3><div class="final-table">
-        <div class="final-row"><b>15 core shorts</b><span>Same core clips adapted across Facebook, Instagram, TikTok, and YouTube Shorts.</span></div>
-        <div class="final-row"><b>5 blogs</b><span>Website SEO, buyer education, project search visibility.</span></div>
-        <div class="final-row"><b>4 premium ads</b><span>Better creative quality before spending serious budget.</span></div>
-        <div class="final-row"><b>8 posts + 5 carousels</b><span>Project clarity, trust, payment plans, updates, and FAQs.</span></div>
-        <div class="final-row"><b>5 LinkedIn posts</b><span>Professional reputation across Developments and Group.</span></div>
-        <div class="final-row"><b>3 medium videos</b><span>Deeper trust through walkthroughs, construction proof, and buyer education.</span></div>
+        <div class="final-row"><b>15 core shorts</b><span>Same core clips adapted across Facebook, Instagram, TikTok, and YouTube Shorts for reach and retargeting fuel.</span></div>
+        <div class="final-row"><b>5 blogs</b><span>Website SEO, buyer education, project search visibility, and stronger organic discovery.</span></div>
+        <div class="final-row"><b>4 premium ads</b><span>Better creative quality before serious spend, with clearer hooks and action paths.</span></div>
+        <div class="final-row"><b>8 posts + 5 carousels</b><span>Project clarity, trust, payment-plan education, updates, FAQs, and profile depth.</span></div>
+        <div class="final-row"><b>5 LinkedIn posts</b><span>Professional reputation across Developments and Group for partners, teams, and serious audiences.</span></div>
+        <div class="final-row"><b>3 medium videos</b><span>Deeper trust through walkthroughs, construction proof, buyer education, and YouTube structure.</span></div>
       </div></div>
+      <div class="final-card approval-card"><h3>Management Decision</h3><ul><li>Approve one controlled monthly engine instead of scattered posting across accounts.</li><li>Keep Memaar Developments as the main buyer-acquisition lane and Memaar Group as the corporate credibility lane.</li><li>Provide missing performance data when available: ad spend, source tracking, WhatsApp inquiries, qualified leads, bookings, and sales outcomes.</li><li>Judge the system by routing quality, consistency, content clarity, profile trust, and measurable inquiries once tracking is available.</li></ul></div>
     </div>
-    <div class="callout"><b>Expected impact:</b> this system should make Memaar's digital presence more professional, more consistent, easier to understand, and better routed. It does not claim confirmed ROI or sales because ad spend, CPL, leads, bookings, and revenue data were not provided.</div>
+    <div class="proposal-close"><div><b>Proposal close:</b><p>This system should make Memaar's digital presence more professional, more consistent, easier to understand, and better routed. It does not claim confirmed ROI or sales because ad spend, CPL, leads, bookings, and revenue data were not provided.</p></div><span class="proposal-pill">Approve the engine</span></div>
   </section>
 
   <section class="section evidence-pack" id="evidence-pack">
@@ -1102,8 +1368,8 @@
     </div>
     <div class="evidence-layout">
       <div class="evidence-panel">
-        <h3>What This File Contains</h3>
-        <p>The evidence pack organizes the supporting research behind this audit into a professional document: research notes, platform screenshots, Linktree and profile checks, MD/PDF/image references, verified metrics, and data-gap notes. It is designed for internal review if the CEO or management asks how the recommendations were formed.</p>
+        <h3>Formal Evidence Gateway</h3>
+        <p>The evidence pack organizes the supporting research behind this audit into a professional document: research notes, platform screenshots, Linktree and profile checks, MD/PDF/image references, verified metrics, and data-gap notes. It keeps the HTML audit compact while giving management a deeper file for internal review.</p>
         <div class="evidence-points">
           <div class="evidence-point"><b>Research AI Outputs</b><span>Categorized findings and reasoning used to shape the audit direction.</span></div>
           <div class="evidence-point"><b>Screenshots & Files</b><span>Platform, Linktree, website, and supporting visual evidence reviewed during the audit.</span></div>
@@ -1127,7 +1393,7 @@
     </div>
   </section>
 
-<footer>Memaar Digital Audit & Optimized Content System V10 - prepared by Hamza Khan. Built from the current supplied data only.</footer>
+<footer>Memaar Digital Audit & Optimized Content System V11 - prepared by Hamza Khan. Built from the current supplied data only.</footer>
 </div>
 </body>
 </html>
