@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Memaar Digital Audit & Optimized Content System - V13</title>
+<title>Memaar Digital Audit & Optimized Content System - V14</title>
 <style>
   :root{
     --ink:#0f1a24;--ink2:#182838;--muted:#5f6d7c;--line:#e3e9f0;--paper:#f8f1e4;--white:#fff;
@@ -368,7 +368,7 @@
   .download-button:hover{transform:translateY(-4px);box-shadow:0 30px 66px rgba(247,223,170,.30);filter:saturate(1.08)}
   .download-note{font-size:14px!important;color:#dce8f3!important}
 
-  /* V13 boardroom premium system */
+  /* V14 boardroom premium system */
   :root{
     --v11-ink:#0c1724;
     --v11-muted:#526579;
@@ -629,7 +629,7 @@
   }
   .download-button:after{content:"";width:8px;height:8px;border-top:2px solid #101820;border-right:2px solid #101820;transform:rotate(45deg)}
 
-  /* V13 visual analytics experience pass */
+  /* V14 visual analytics experience pass */
   :root{
     --rail-bg:rgba(7,16,29,.66);
     --rail-line:rgba(247,223,170,.20);
@@ -873,7 +873,7 @@
   .section p,.platform-card p,.info-card p,.info-card li,.final-card p,.final-card li{
     text-wrap:pretty;
   }
-  /* V13 analytics and chart system */
+  /* V14 analytics and chart system */
   .analytics-section{
     padding:30px;
     border-radius:32px;
@@ -1043,6 +1043,163 @@
     font-weight:800;
   }
   .pa-output-list b{color:#f7dfaa}
+  /* V14 executive polish pass */
+  .analytics-section .section-head h2,
+  .company-banner h2,
+  .platform-top h3,
+  .final .section-head h2,
+  .evidence-pack .section-head h2{
+    text-wrap:balance;
+  }
+  .analytics-section .section-head h2:after,
+  .final .section-head h2:after,
+  .evidence-pack .section-head h2:after{
+    content:"";
+    display:block;
+    width:92px;
+    height:3px;
+    margin-top:14px;
+    border-radius:999px;
+    background:linear-gradient(90deg,#f7dfaa,#087f5b,#4094b5);
+    background-size:220% 100%;
+    animation:goldLineDrift 4.8s ease-in-out infinite alternate;
+  }
+  .analytics-card,
+  .capture-card,
+  .rhythm-column,
+  .role-lane,
+  .pa-card,
+  .final-card,
+  .evidence-panel,
+  .download-box{
+    backdrop-filter:blur(14px) saturate(1.08);
+  }
+  .analytics-card:hover,
+  .rhythm-column:hover,
+  .role-lane:hover,
+  .pa-card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(247,223,170,.38);
+    box-shadow:0 30px 80px rgba(0,0,0,.20),inset 0 1px 0 rgba(255,255,255,.12);
+  }
+  .bar-row{
+    padding:7px 9px;
+    margin-inline:-9px;
+    border-radius:16px;
+    transition:background .24s ease,transform .24s ease;
+  }
+  .bar-row:hover{background:rgba(255,255,255,.07);transform:translateX(4px)}
+  .bar-fill,
+  .mini-track span{
+    transform-origin:left center;
+    animation:barReveal .9s ease both;
+  }
+  .bar-row:nth-child(2) .bar-fill,.mini-bar:nth-child(2) .mini-track span{animation-delay:.05s}
+  .bar-row:nth-child(3) .bar-fill,.mini-bar:nth-child(3) .mini-track span{animation-delay:.10s}
+  .bar-row:nth-child(4) .bar-fill,.mini-bar:nth-child(4) .mini-track span{animation-delay:.15s}
+  .bar-row:nth-child(5) .bar-fill,.mini-bar:nth-child(5) .mini-track span{animation-delay:.20s}
+  .bar-row:nth-child(6) .bar-fill,.mini-bar:nth-child(6) .mini-track span{animation-delay:.25s}
+  .bar-row:nth-child(7) .bar-fill,.mini-bar:nth-child(7) .mini-track span{animation-delay:.30s}
+  .bar-row:nth-child(8) .bar-fill,.mini-bar:nth-child(8) .mini-track span{animation-delay:.35s}
+  .capture-card{
+    min-height:148px;
+    display:flex;
+    flex-direction:column;
+  }
+  .capture-card p{margin-top:auto}
+  .pa-card:nth-child(2){
+    background:linear-gradient(145deg,rgba(10,24,40,.96),rgba(31,61,83,.86));
+  }
+  .pa-card:nth-child(3){
+    background:radial-gradient(circle at 88% 10%,rgba(247,223,170,.14),transparent 34%),linear-gradient(145deg,rgba(8,34,38,.94),rgba(20,63,66,.86));
+  }
+  .pa-output-list span:before{
+    content:"";
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    flex:0 0 auto;
+    margin-top:6px;
+    background:linear-gradient(135deg,rgba(var(--platform-a),1),rgba(var(--platform-b),1));
+    box-shadow:0 0 18px rgba(var(--platform-a),.35);
+  }
+  .pa-output-list span{justify-content:flex-start;align-items:flex-start}
+  .final{
+    background:
+      radial-gradient(circle at 12% 14%,rgba(247,223,170,.20),transparent 30%),
+      radial-gradient(circle at 90% 8%,rgba(8,127,91,.22),transparent 34%),
+      radial-gradient(circle at 70% 90%,rgba(64,148,181,.18),transparent 35%),
+      linear-gradient(145deg,#06101c 0%,#10243a 48%,#083b3e 100%)!important;
+  }
+  .final-card.wide > p{
+    max-width:1060px;
+    font-size:17px;
+  }
+  .output-strip{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .output-tile{
+    min-height:148px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+  }
+  .output-tile strong{
+    font-variant-numeric:tabular-nums;
+    letter-spacing:-.03em;
+  }
+  .decision-ribbon{
+    margin-top:18px;
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:14px;
+    align-items:center;
+    padding:16px 18px;
+    border-radius:22px;
+    background:linear-gradient(90deg,rgba(247,223,170,.16),rgba(8,127,91,.14));
+    border:1px solid rgba(247,223,170,.24);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.08);
+  }
+  .decision-ribbon b{display:block;color:#f7dfaa;font-size:16px}
+  .decision-ribbon span{display:block;color:#edf5fc}
+  .decision-ribbon em{
+    font-style:normal;
+    padding:10px 13px;
+    border-radius:999px;
+    color:#101820;
+    background:linear-gradient(90deg,#f7dfaa,#d9af57);
+    font-size:12px;
+    font-weight:950;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    white-space:nowrap;
+  }
+  .evidence-pack{
+    background:
+      radial-gradient(circle at 14% 12%,rgba(247,223,170,.20),transparent 28%),
+      radial-gradient(circle at 82% 82%,rgba(109,63,209,.18),transparent 34%),
+      linear-gradient(145deg,#08111e 0%,#172b40 54%,#102f36 100%)!important;
+  }
+  .download-box{
+    position:relative;
+    overflow:hidden;
+    border-color:rgba(247,223,170,.30)!important;
+  }
+  .download-box:before{
+    content:"";
+    position:absolute;
+    inset:0 0 auto 0;
+    height:4px;
+    background:linear-gradient(90deg,#f7dfaa,#087f5b,#6d3fd1);
+  }
+  .download-button{
+    transition:transform .24s ease,box-shadow .24s ease,filter .24s ease;
+  }
+  .download-button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 18px 42px rgba(247,223,170,.18);
+    filter:saturate(1.08);
+  }
+  @keyframes goldLineDrift{from{background-position:0% 50%}to{background-position:100% 50%}}
+  @keyframes barReveal{from{transform:scaleX(.08);filter:saturate(.7)}to{transform:scaleX(1);filter:saturate(1)}}
   @media(max-width:1540px){
     .chapter-rail{display:none}
   }
@@ -1053,7 +1210,8 @@
     .chapter-rail{display:none}
     .execution-system{grid-template-columns:1fr}
     .chapter-transition{padding:22px}
-    .analytics-grid,.score-ring-wrap,.rhythm-analytics,.platform-analytics{grid-template-columns:1fr}
+    .analytics-grid,.score-ring-wrap,.rhythm-analytics,.platform-analytics,.decision-ribbon{grid-template-columns:1fr}
+    .decision-ribbon em{justify-self:start}
     .capture-grid{grid-template-columns:1fr 1fr}
     .role-flow{grid-template-columns:1fr}
     .flow-arrow{transform:rotate(90deg)}
@@ -1147,14 +1305,14 @@
   </section>
 
   <header class="hero" id="audit">
-    <span class="eyebrow">Memaar Digital Audit - V13 analytics edition</span>
+    <span class="eyebrow">Memaar Digital Audit - V14 executive analytics edition</span>
     <h1>Digital Audit & Optimized Content System</h1>
     <p>A compact, company-by-company audit built from the current data supplied by Memaar. The focus is practical: understand the digital situation, keep what works, fix what blocks action, and run a controlled monthly content engine.</p>
     <div class="executive-snapshot">
       <div class="snapshot-copy">
         <span class="snapshot-kicker">Executive Snapshot</span>
         <strong>Memaar has reach. The next professional step is action routing.</strong>
-        <p>The audit shows a reach-strong but conversion-weak digital operation. V13 adds an analytical layer: clearer charts, platform-level data storytelling, stronger buyer paths, and one monthly engine managed with discipline.</p>
+        <p>The audit shows a reach-strong but conversion-weak digital operation. V14 sharpens the analytical layer with clearer chart hierarchy, platform-level data storytelling, stronger buyer paths, and one monthly engine managed with discipline.</p>
       </div>
       <div class="snapshot-stack">
         <div class="snapshot-item"><span class="snapshot-num">01</span><div><b>Visibility is proven</b><span>Facebook, TikTok, YouTube, Instagram, LinkedIn, and Search already create attention.</span></div></div>
@@ -1163,10 +1321,10 @@
       </div>
     </div>
     <div class="hero-grid">
-      <div class="hero-stat"><b>65/100</b><span>Digital readiness score: reach-strong, conversion-weak.</span></div>
-      <div class="hero-stat"><b>4.1M</b><span>Facebook Developments 90-day views.</span></div>
-      <div class="hero-stat"><b>15</b><span>Core monthly short-form clips adapted across platforms.</span></div>
-      <div class="hero-stat"><b>5</b><span>SEO blogs per month for website growth.</span></div>
+      <div class="hero-stat"><b data-count="65" data-suffix="/100">65/100</b><span>Digital readiness score: reach-strong, conversion-weak.</span></div>
+      <div class="hero-stat"><b data-count="4.1" data-suffix="M">4.1M</b><span>Facebook Developments 90-day views.</span></div>
+      <div class="hero-stat"><b data-count="15">15</b><span>Core monthly short-form clips adapted across platforms.</span></div>
+      <div class="hero-stat"><b data-count="5">5</b><span>SEO blogs per month for website growth.</span></div>
     </div>
   </header>
 
@@ -1179,7 +1337,7 @@
             <defs><linearGradient id="scoreGradient" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#f7dfaa"/><stop offset="100%" stop-color="#087f5b"/></linearGradient></defs>
             <circle cx="90" cy="90" r="68" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="14"/>
             <circle cx="90" cy="90" r="68" fill="none" stroke="url(#scoreGradient)" stroke-width="14" stroke-linecap="round" stroke-dasharray="278 428" transform="rotate(-90 90 90)"/>
-            <text x="90" y="84" text-anchor="middle" class="score">65/100</text>
+            <text x="90" y="84" text-anchor="middle" class="score" data-count="65" data-suffix="/100">65/100</text>
             <text x="90" y="108" text-anchor="middle" class="label">Digital Readiness</text>
           </svg>
           <div class="score-labels">
@@ -1992,16 +2150,17 @@
     <div class="final-grid">
       <div class="final-card wide"><h3>Controlled Monthly Content Engine</h3><p>This is the operating system Hamza will run: one shared monthly content engine, split intelligently between buyer acquisition, corporate credibility, website growth, and profile cleanup. The monthly system includes 15 core short-form clips, 5 SEO blogs, 4 premium Facebook ad creatives, 8 cross-platform posts, 5 Instagram carousels, 5 LinkedIn posts, 3 medium videos, and 1 cleanup session. The focus is not to post more for appearance. The focus is to make every content piece easier to understand, easier to trust, and easier to route toward action.</p>
         <div class="output-strip">
-          <div class="output-tile"><strong>15</strong><span>core short clips adapted across Facebook, Instagram, TikTok, and YouTube Shorts</span></div>
-          <div class="output-tile"><strong>5</strong><span>SEO blogs connected to buyer questions, project pages, and search demand</span></div>
-          <div class="output-tile"><strong>4</strong><span>premium Facebook ad creatives with stronger hooks, offers, and CTAs</span></div>
-          <div class="output-tile"><strong>1</strong><span>monthly cleanup for bios, links, CTAs, highlights, and routing</span></div>
+          <div class="output-tile"><strong data-count="15">15</strong><span>core short clips adapted across Facebook, Instagram, TikTok, and YouTube Shorts</span></div>
+          <div class="output-tile"><strong data-count="5">5</strong><span>SEO blogs connected to buyer questions, project pages, and search demand</span></div>
+          <div class="output-tile"><strong data-count="4">4</strong><span>premium Facebook ad creatives with stronger hooks, offers, and CTAs</span></div>
+          <div class="output-tile"><strong data-count="1">1</strong><span>monthly cleanup for bios, links, CTAs, highlights, and routing</span></div>
         </div>
         <div class="final-lanes">
           <div class="lane-card"><b>Developments Lane</b><p>Project proof, payment-plan clarity, construction progress, buyer questions, and inquiry routing.</p></div>
           <div class="lane-card"><b>Group Lane</b><p>Leadership, team, milestones, partnerships, community, and corporate credibility.</p></div>
           <div class="lane-card"><b>Support Lane</b><p>Sister companies only when they add buyer education, design proof, construction proof, or credibility.</p></div>
         </div>
+        <div class="decision-ribbon"><div><b>Executive decision</b><span>Approve one controlled monthly content engine, then judge it by consistency, clarity, routing quality, and measurable inquiry paths once tracking is available.</span></div><em>Controlled engine</em></div>
       </div>
       <div class="final-card"><h3>What Hamza Will Run</h3><ul><li>Operate one monthly content system built around 15 core short-form videos adapted across Facebook, Instagram, TikTok, and YouTube Shorts.</li><li>Publish 5 buyer-intent SEO blogs that connect website traffic to project pages, WhatsApp actions, and relevant CTAs.</li><li>Create 4 premium Facebook ad creatives per month so paid budget is supported by strong hooks, message clarity, and better visual execution.</li><li>Manage 8 cross-platform posts, 5 Instagram carousels, 5 LinkedIn posts, and 3 medium-format videos without creating unnecessary volume.</li><li>Clean bios, links, CTAs, highlights, routing, project labels, and profile quality every month so users understand where to go next.</li></ul></div>
       <div class="final-card"><h3>Monthly Output Summary</h3><div class="final-table">
@@ -2054,7 +2213,7 @@
     </div>
   </section>
 
-<footer>Memaar Digital Audit & Optimized Content System V13 - prepared by Hamza Khan. Built from the current supplied data only.</footer>
+<footer>Memaar Digital Audit & Optimized Content System V14 - prepared by Hamza Khan. Built from the current supplied data only.</footer>
 </div>
 <script>
 (() => {
@@ -2097,6 +2256,37 @@
   setActiveChapter();
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onScroll);
+
+  const countTargets = Array.from(document.querySelectorAll('[data-count]'));
+  if (!reduceMotion && 'IntersectionObserver' in window && countTargets.length) {
+    const animateCount = (el) => {
+      if (el.dataset.counted === 'true') return;
+      el.dataset.counted = 'true';
+      const target = Number(el.dataset.count);
+      const suffix = el.dataset.suffix || '';
+      const decimals = String(el.dataset.count).includes('.') ? 1 : 0;
+      const start = performance.now();
+      const duration = 1050;
+      const ease = (t) => 1 - Math.pow(1 - t, 3);
+      const frame = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const value = target * ease(progress);
+        el.textContent = `${value.toFixed(decimals)}${suffix}`;
+        if (progress < 1) requestAnimationFrame(frame);
+        else el.textContent = `${target.toFixed(decimals)}${suffix}`;
+      };
+      el.textContent = `${(0).toFixed(decimals)}${suffix}`;
+      requestAnimationFrame(frame);
+    };
+    const countObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        animateCount(entry.target);
+        countObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.28, rootMargin: '0px 0px -8% 0px' });
+    countTargets.forEach((el) => countObserver.observe(el));
+  }
 
   const revealSelectors = [
     '.about',
