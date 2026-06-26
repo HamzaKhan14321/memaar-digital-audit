@@ -1332,6 +1332,174 @@
   }
   .approval-strip b{display:block;color:#f7dfaa;font-size:18px}
   .approval-strip span{display:block;color:#e8f2fa;font-size:12px;font-weight:850;line-height:1.45}
+  /* Premium rebuild for benchmark and action-capture chapters */
+  #benchmark{
+    padding:0;
+    color:#fff;
+    background:
+      radial-gradient(circle at 12% 10%,rgba(247,223,170,.20),transparent 30%),
+      radial-gradient(circle at 92% 16%,rgba(180,35,45,.20),transparent 30%),
+      radial-gradient(circle at 80% 92%,rgba(64,148,181,.18),transparent 34%),
+      linear-gradient(135deg,#070f1b 0%,#152b42 54%,#082f34 100%)!important;
+    border-color:rgba(247,223,170,.25)!important;
+    box-shadow:0 34px 96px rgba(9,18,30,.22);
+  }
+  #benchmark:before{opacity:1;background:linear-gradient(90deg,rgba(247,223,170,.95),rgba(180,35,45,.72),rgba(8,127,91,.64),transparent)}
+  #benchmark:after{opacity:.55;background:radial-gradient(circle,rgba(180,35,45,.18),transparent 66%)}
+  #benchmark .benchmark-panel{
+    padding:32px;
+    border-radius:30px;
+    background:
+      linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.035)),
+      radial-gradient(circle at 85% 10%,rgba(247,223,170,.12),transparent 34%);
+    border:1px solid rgba(255,255,255,.12);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.08);
+  }
+  #benchmark .benchmark-panel:before{
+    background:linear-gradient(105deg,rgba(247,223,170,.10),transparent 30%,rgba(180,35,45,.12) 72%,transparent);
+  }
+  #benchmark .benchmark-hero{
+    grid-template-columns:minmax(0,1fr) minmax(310px,.55fr);
+    border-bottom:1px solid rgba(255,255,255,.14);
+    margin-bottom:20px;
+    padding-bottom:22px;
+  }
+  #benchmark .benchmark-title h2{
+    color:#fff;
+    font-size:clamp(42px,5vw,66px);
+  }
+  #benchmark .benchmark-title h2:after{
+    content:"";
+    display:block;
+    width:94px;
+    height:3px;
+    margin-top:14px;
+    border-radius:999px;
+    background:linear-gradient(90deg,#f7dfaa,#b4232d,#087f5b);
+    background-size:220% 100%;
+    animation:goldLineDrift 4.8s ease-in-out infinite alternate;
+  }
+  #benchmark .benchmark-title p{color:#e4eef7;font-size:17px;line-height:1.68}
+  #benchmark .benchmark-scorecard{
+    background:radial-gradient(circle at 90% 8%,rgba(247,223,170,.18),transparent 34%),linear-gradient(145deg,rgba(7,16,29,.92),rgba(34,52,70,.76));
+    border-color:rgba(247,223,170,.24);
+    box-shadow:0 24px 64px rgba(0,0,0,.20),inset 0 1px 0 rgba(255,255,255,.08);
+  }
+  #benchmark .benchmark-scorecard strong{font-family:Georgia,"Times New Roman",serif;font-size:38px;letter-spacing:-.035em}
+  #benchmark .benchmark-summary{gap:14px;margin-bottom:18px}
+  #benchmark .summary-card{
+    background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.06));
+    border-color:rgba(255,255,255,.14);
+    box-shadow:0 18px 46px rgba(0,0,0,.12),inset 0 1px 0 rgba(255,255,255,.06);
+    backdrop-filter:blur(14px) saturate(1.08);
+  }
+  #benchmark .summary-card b{color:#f7dfaa}
+  #benchmark .summary-card p{color:#e6f0f8}
+  #benchmark .bench-grid{gap:14px}
+  #benchmark .bench-card{
+    min-height:218px;
+    padding:20px;
+    background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.055));
+    border-color:rgba(255,255,255,.15);
+    box-shadow:0 22px 60px rgba(0,0,0,.16),inset 0 1px 0 rgba(255,255,255,.07);
+    backdrop-filter:blur(14px) saturate(1.08);
+  }
+  #benchmark .bench-card:hover{
+    transform:translateY(-7px);
+    border-color:var(--benchBorder);
+    box-shadow:0 34px 86px var(--benchShadow),inset 0 1px 0 rgba(255,255,255,.10);
+  }
+  #benchmark .bench-top b,
+  #benchmark .bench-value{color:#fff}
+  #benchmark .bench-value{font-size:28px}
+  #benchmark .bench-note{color:#dce8f3;line-height:1.58}
+  #benchmark .bench-foot{border-color:rgba(255,255,255,.12);color:#b9c9d8}
+  #benchmark .bench-meter{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.08)}
+  #benchmark .benchmark-close{
+    margin-top:18px;
+    background:linear-gradient(90deg,rgba(247,223,170,.15),rgba(180,35,45,.13),rgba(8,127,91,.12));
+    border-color:rgba(247,223,170,.24);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 22px 60px rgba(0,0,0,.16);
+  }
+  #action-capture-chart{
+    background:
+      radial-gradient(circle at 9% 10%,rgba(180,35,45,.22),transparent 31%),
+      radial-gradient(circle at 90% 15%,rgba(247,223,170,.18),transparent 30%),
+      radial-gradient(circle at 80% 95%,rgba(8,127,91,.18),transparent 34%),
+      linear-gradient(135deg,#070f1b 0%,#16283d 48%,#33141c 100%)!important;
+    border-color:rgba(255,157,157,.24);
+  }
+  .capture-dashboard{
+    display:grid;
+    grid-template-columns:.78fr 1.22fr;
+    gap:16px;
+    align-items:stretch;
+  }
+  .capture-lead{
+    position:relative;
+    overflow:hidden;
+    padding:24px;
+    border-radius:26px;
+    background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.06));
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 24px 64px rgba(0,0,0,.17),inset 0 1px 0 rgba(255,255,255,.08);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .capture-lead:before{
+    content:"";
+    position:absolute;
+    inset:0 0 auto 0;
+    height:4px;
+    background:linear-gradient(90deg,#ff9d9d,#f7dfaa,#087f5b);
+  }
+  .capture-lead small{color:#f7dfaa;font-weight:950;text-transform:uppercase;letter-spacing:.08em}
+  .capture-lead h3{
+    margin:14px 0 12px;
+    color:#fff;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(30px,3.2vw,46px);
+    line-height:1.02;
+    letter-spacing:-.04em;
+  }
+  .capture-lead p{margin:0;color:#e7f0f8;line-height:1.68}
+  .capture-lead-strip{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+  .capture-lead-strip span{
+    padding:12px;
+    border-radius:16px;
+    background:rgba(255,255,255,.09);
+    border:1px solid rgba(255,255,255,.12);
+    color:#f0f7fd;
+    font-size:12px;
+    font-weight:900;
+  }
+  #action-capture-chart .capture-grid{gap:14px}
+  #action-capture-chart .capture-card{
+    min-height:166px;
+    background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.055));
+    border-color:rgba(255,255,255,.15);
+    box-shadow:0 20px 58px rgba(0,0,0,.15),inset 0 1px 0 rgba(255,255,255,.07);
+  }
+  #action-capture-chart .capture-card:before{
+    content:"";
+    display:block;
+    width:42px;
+    height:4px;
+    border-radius:999px;
+    margin-bottom:12px;
+    background:linear-gradient(90deg,#f7dfaa,#087f5b);
+  }
+  #action-capture-chart .capture-card.weak:before{background:linear-gradient(90deg,#f7dfaa,#e17348)}
+  #action-capture-chart .capture-card.risk:before{background:linear-gradient(90deg,#ff9d9d,#b4232d)}
+  #action-capture-chart .capture-card small{color:#c9d8e7}
+  #action-capture-chart .capture-card strong{font-size:32px;letter-spacing:-.03em}
+  #action-capture-chart .capture-card p{color:#e7f0f8;line-height:1.55}
+  #action-capture-chart .chart-note{
+    color:#fff;
+    background:linear-gradient(90deg,rgba(247,223,170,.14),rgba(180,35,45,.12),rgba(8,127,91,.10));
+    border-color:rgba(247,223,170,.26);
+  }
   @keyframes goldLineDrift{from{background-position:0% 50%}to{background-position:100% 50%}}
   @keyframes barReveal{from{transform:scaleX(.08);filter:saturate(.7)}to{transform:scaleX(1);filter:saturate(1)}}
   @media(max-width:1540px){
@@ -1344,7 +1512,7 @@
     .chapter-rail{display:none}
     .execution-system{grid-template-columns:1fr}
     .chapter-transition{padding:22px}
-    .analytics-grid,.score-ring-wrap,.rhythm-analytics,.platform-analytics,.decision-ribbon,.decision-deck,.approval-strip{grid-template-columns:1fr}
+    .analytics-grid,.score-ring-wrap,.rhythm-analytics,.platform-analytics,.decision-ribbon,.decision-deck,.approval-strip,.capture-dashboard{grid-template-columns:1fr}
     .decision-ribbon em{justify-self:start}
     .capture-grid{grid-template-columns:1fr 1fr}
     .role-flow{grid-template-columns:1fr}
@@ -1637,13 +1805,23 @@
 
   <section class="section analytics-section" id="action-capture-chart">
     <div class="section-head"><div><h2>Visibility vs Action Capture</h2><p class="section-note">The conversion problem is visible across multiple channels: high attention is not yet becoming enough link taps, followers, subscribers, button clicks, or tracked inquiries.</p></div><span class="pill red">Action gap</span></div>
-    <div class="capture-grid">
-      <div class="capture-card weak"><small>Instagram link tap rate</small><strong>1.7%</strong><p>8 link taps from 476 profile visits. Weak profile-to-action movement.</p></div>
-      <div class="capture-card risk"><small>TikTok follower capture</small><strong>0.37%</strong><p>254 followers from 68.5K viewers. Visibility is not converting into repeat audience strongly enough.</p></div>
-      <div class="capture-card risk"><small>YouTube subscriber capture</small><strong>0.076%</strong><p>301 subscribers from 396.5K all-time views. Historical trust exists, but capture is weak.</p></div>
-      <div class="capture-card weak"><small>Facebook engagement capture</small><strong>0.76%</strong><p>31K engagement from 4.1M views. Slightly weak for such large reach.</p></div>
-      <div class="capture-card"><small>LinkedIn action gap</small><strong>6.7% ER</strong><p>Strong engagement quality, but 0 custom button clicks means action routing is incomplete.</p></div>
-      <div class="capture-card"><small>Website CTR</small><strong>5.4%</strong><p>Useful search signal, but project pages and buyer-routing paths can still improve.</p></div>
+    <div class="capture-dashboard">
+      <div class="capture-lead">
+        <div>
+          <small>Action capture diagnosis</small>
+          <h3>Attention is present. Capture is the missing layer.</h3>
+          <p>The verified numbers show that Memaar can attract viewers, but the current system is weaker at turning viewers into link taps, followers, subscribers, profile actions, button clicks, and trackable inquiry paths.</p>
+        </div>
+        <div class="capture-lead-strip"><span>Weak conversion signals</span><span>Routing needs structure</span><span>Useful website CTR</span><span>LinkedIn quality signal</span></div>
+      </div>
+      <div class="capture-grid">
+        <div class="capture-card weak"><small>Instagram link tap rate</small><strong>1.7%</strong><p>8 link taps from 476 profile visits. Weak profile-to-action movement.</p></div>
+        <div class="capture-card risk"><small>TikTok follower capture</small><strong>0.37%</strong><p>254 followers from 68.5K viewers. Visibility is not converting into repeat audience strongly enough.</p></div>
+        <div class="capture-card risk"><small>YouTube subscriber capture</small><strong>0.076%</strong><p>301 subscribers from 396.5K all-time views. Historical trust exists, but capture is weak.</p></div>
+        <div class="capture-card weak"><small>Facebook engagement capture</small><strong>0.76%</strong><p>31K engagement from 4.1M views. Slightly weak for such large reach.</p></div>
+        <div class="capture-card"><small>LinkedIn action gap</small><strong>6.7% ER</strong><p>Strong engagement quality, but 0 custom button clicks means action routing is incomplete.</p></div>
+        <div class="capture-card"><small>Website CTR</small><strong>5.4%</strong><p>Useful search signal, but project pages and buyer-routing paths can still improve.</p></div>
+      </div>
     </div>
     <div class="chart-note">Memaar is strong in visibility but weak in conversion, follower capture, and action routing.</div>
   </section>
